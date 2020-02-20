@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/et/com/smpp/model" mnemonic="4" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5a59edee-3f1c-4283-84e9-8281003761bd" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="smppSmsDb@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="smppSmsDb@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="smppSmsDb@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="smppSmsDb: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="smppSmsDb@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="smppSmsDb: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="blackList: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="smppSms" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/services/BulkServices/PrepareMessageForSendService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="49" column="51" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/AdminEndPoints/GetAdminEndPoints.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="455">
+              <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/services/security/AuthRegisterServices.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/services/AdminServices/AdminGetServices.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1125">
+              <caret line="91" column="39" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://99822b0b-c346-44bc-9650-2a018bd67663/schema/smppSmsDb/table/bulkMessage">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://99822b0b-c346-44bc-9650-2a018bd67663/schema/smppSmsDb/table/blackList">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>GetSubscribtionEndPoint</find>
+      <find>Bulkmessage</find>
+      <find>bulkMessage</find>
+      <find>catagoryTable</find>
+      <find>Bearer</find>
+      <find>SubscrptionService</find>
+      <find>,catalog=&quot;smppSmsDb&quot;</find>
+      <find>h2</find>
+      <find>findByPhone</find>
+      <find>findByPhoneMessage</find>
+      <find>countSubscribers</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>BulkMessage</replace>
+      <replace>CatagoryTable</replace>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/ReceiveSMS" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/dao/PasswordhistoryDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/dao/RoleDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/dao/StaffDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/services/AdminServices/UpdateAdminServices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/services/BulkServices/MessageSendService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/OutDTOs/GetSubscribesDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/OutDTOs/OutMessageDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/OutDTOs/msgSendResponseDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cassiomolin/user/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/model/CatagoryTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/OutDTOs/OutGetCatagoryDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/model/SubscribtionTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/AdminEndPoints/UpdateAdminEndPoints.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cassiomolin/security/domain/Authority.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/InDTOs/InRegisterCatagoryDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/dao/CatagoryTableDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/services/AdminServices/AdminRegisterServices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/model/NamedParameterList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/model/SyncOrderRelationDump.java" />
+        <option value="$PROJECT_DIR$/ReceiveSMS/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/services/BulkServices/SubscrptionService.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/99822b0b-c346-44bc-9650-2a018bd67663/console_1.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/dao/SyncOrderRelationDumpDao.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/99822b0b-c346-44bc-9650-2a018bd67663/console_2.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/SubscribtionEndPoints/GetSubscribtionEndPoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/AdminEndPoints/RegisterAdminEndPoints.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/OutDTOs/EthioTelLogListOutDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/dao/BulkMessageDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/OutDTOs/SendPrivateMsgOutDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/services/AdminServices/SendPrivateMassageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/BulkEndPoints/InternalBulkSendEndPoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/BulkEndPoints/InternalBulkPrepareEndPoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/BulkEndPoints/SendBulkEndPoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/BulkEndPoints/PrepareBulkEndPoints.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/AdminEndPoints/SendPrivateMassageEndPoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/AdminEndPoints/GetMessageByToUpdate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/dao/MessageTableDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/AdminEndPoints/GetMessageToUpdateEndPoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/InDTOs/InUpdateCatagoryDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/services/AdminServices/AdminGetServices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/AdminEndPoints/GetAdminEndPoints.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/InDTOs/subscription/SubscriptionQueryDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/dao/SubscribtionTableDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/services/AdminServices/ReportService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/InDTOs/subscription/SubscriptionDTOInt.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/AdminEndPoints/ReportEndPoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/dao/BlackListDao.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/services/BulkServices/PrepareMessageForSendService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/et/com/smpp/services/security/AuthRegisterServices.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="smppSms" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="smppSms" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1678" />
+    <option name="y" value="27" />
+    <option name="width" value="242" />
+    <option name="height" value="1053" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="PackagesPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="smppSms" type="58d84e3e:PackageViewProjectNode" />
+              <item name="smppSms" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="smppSms" type="58d84e3e:PackageViewProjectNode" />
+              <item name="smppSms" type="616d4139:PackageViewModuleNode" />
+              <item name="et.com.smpp" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="smppSms" type="58d84e3e:PackageViewProjectNode" />
+              <item name="smppSms" type="616d4139:PackageViewModuleNode" />
+              <item name="et.com.smpp" type="1f31426a:PackageElementNode" />
+              <item name="EndPoints" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="smppSms" type="58d84e3e:PackageViewProjectNode" />
+              <item name="smppSms" type="616d4139:PackageViewModuleNode" />
+              <item name="et.com.smpp" type="1f31426a:PackageElementNode" />
+              <item name="EndPoints" type="1f31426a:PackageElementNode" />
+              <item name="AdminEndPoints" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="smppSms" type="58d84e3e:PackageViewProjectNode" />
+              <item name="smppSms" type="616d4139:PackageViewModuleNode" />
+              <item name="et.com.smpp" type="1f31426a:PackageElementNode" />
+              <item name="model" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="smppSms" type="58d84e3e:PackageViewProjectNode" />
+              <item name="smppSms" type="616d4139:PackageViewModuleNode" />
+              <item name="et.com.smpp" type="1f31426a:PackageElementNode" />
+              <item name="services" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="smppSms" type="58d84e3e:PackageViewProjectNode" />
+              <item name="smppSms" type="616d4139:PackageViewModuleNode" />
+              <item name="et.com.smpp" type="1f31426a:PackageElementNode" />
+              <item name="services" type="1f31426a:PackageElementNode" />
+              <item name="AdminServices" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="smppSms" type="58d84e3e:PackageViewProjectNode" />
+              <item name="smppSms" type="616d4139:PackageViewModuleNode" />
+              <item name="et.com.smpp" type="1f31426a:PackageElementNode" />
+              <item name="services" type="1f31426a:PackageElementNode" />
+              <item name="BulkServices" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="smppSms" type="58d84e3e:PackageViewProjectNode" />
+              <item name="smppSms" type="616d4139:PackageViewModuleNode" />
+              <item name="et.com.smpp" type="1f31426a:PackageElementNode" />
+              <item name="services" type="1f31426a:PackageElementNode" />
+              <item name="security" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="smppSms" type="58d84e3e:PackageViewProjectNode" />
+              <item name="smppSms" type="616d4139:PackageViewModuleNode" />
+              <item name="META-INF" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582176844920" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../jdbc driver/mysql-connector-java-5.1.40.jar" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="et.com.smpp.EndPoints.SubscribtionEndPoints" />
+      <recent name="et.com.smpp" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="et.com.smpp.InDTOs" />
+      <recent name="et.com.smpp.OutDTOs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Samson\smppSms\src\main\java\et\com\smpp\services" />
+      <recent name="C:\Users\Samson\smppSms\src\main\java\et\com\smpp\rest" />
+      <recent name="C:\Users\Samson\smppSms\src\main\java\et\com\smpp\OutDTOs" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a59edee-3f1c-4283-84e9-8281003761bd" name="Default" comment="" />
+      <created>1550741273764</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550741273764</updated>
+      <workItem from="1550741280170" duration="1114000" />
+      <workItem from="1550806953396" duration="43000" />
+      <workItem from="1551241505453" duration="4191000" />
+      <workItem from="1551254604210" duration="6050000" />
+      <workItem from="1551331766430" duration="18496000" />
+      <workItem from="1551416521496" duration="8453000" />
+      <workItem from="1551522979156" duration="2108000" />
+      <workItem from="1551667078992" duration="7696000" />
+      <workItem from="1551751988104" duration="1191000" />
+      <workItem from="1551780373843" duration="587000" />
+      <workItem from="1551786845414" duration="700000" />
+      <workItem from="1551787603390" duration="115000" />
+      <workItem from="1551842686894" duration="6414000" />
+      <workItem from="1551852124486" duration="378000" />
+      <workItem from="1551852543475" duration="48000" />
+      <workItem from="1551852638857" duration="680000" />
+      <workItem from="1551931372695" duration="14155000" />
+      <workItem from="1552271672579" duration="2516000" />
+      <workItem from="1552389339851" duration="221000" />
+      <workItem from="1552389800862" duration="3575000" />
+      <workItem from="1552454610480" duration="8770000" />
+      <workItem from="1552543112266" duration="1181000" />
+      <workItem from="1552630957793" duration="587000" />
+      <workItem from="1552876765002" duration="629000" />
+      <workItem from="1552966243066" duration="734000" />
+      <workItem from="1553226292505" duration="2464000" />
+      <workItem from="1555329266337" duration="7946000" />
+      <workItem from="1555395811879" duration="4698000" />
+      <workItem from="1555662782084" duration="626000" />
+      <workItem from="1555748991438" duration="654000" />
+      <workItem from="1557119891028" duration="3635000" />
+      <workItem from="1557392686003" duration="718000" />
+      <workItem from="1557909858473" duration="233000" />
+      <workItem from="1558076124454" duration="12994000" />
+      <workItem from="1558336063227" duration="3938000" />
+      <workItem from="1558419506819" duration="592000" />
+      <workItem from="1558428560202" duration="123000" />
+      <workItem from="1558501428659" duration="6320000" />
+      <workItem from="1558518132164" duration="597000" />
+      <workItem from="1558594718275" duration="4585000" />
+      <workItem from="1558601833263" duration="9606000" />
+      <workItem from="1558693542808" duration="971000" />
+      <workItem from="1558959058528" duration="10000" />
+      <workItem from="1559560318843" duration="617000" />
+      <workItem from="1559631953775" duration="2748000" />
+      <workItem from="1559713759624" duration="1738000" />
+      <workItem from="1559803127806" duration="1206000" />
+      <workItem from="1559834176419" duration="2722000" />
+      <workItem from="1559884274793" duration="2581000" />
+      <workItem from="1559978962370" duration="589000" />
+      <workItem from="1560145609993" duration="2141000" />
+      <workItem from="1560429876107" duration="1055000" />
+      <workItem from="1564982166724" duration="3167000" />
+      <workItem from="1565588783052" duration="662000" />
+      <workItem from="1565699969525" duration="5638000" />
+      <workItem from="1565771865153" duration="19014000" />
+      <workItem from="1565935200836" duration="4893000" />
+      <workItem from="1566028395221" duration="2470000" />
+      <workItem from="1566201595655" duration="2511000" />
+      <workItem from="1566280787312" duration="5837000" />
+      <workItem from="1566889868268" duration="9114000" />
+      <workItem from="1569495281610" duration="843000" />
+      <workItem from="1570619395188" duration="727000" />
+      <workItem from="1580113635290" duration="1591000" />
+      <workItem from="1580188351857" duration="593000" />
+      <workItem from="1580197736391" duration="1955000" />
+      <workItem from="1580208725699" duration="24000" />
+      <workItem from="1582176048985" duration="983000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="226782000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4993007" visible="true" weight="0.33814102" />
+      <window_info id="Structure" order="1" sideWeight="0.5006993" side_tool="true" weight="0.22300771" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" sideWeight="0.5006993" side_tool="true" weight="0.22300771" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info id="Persistence" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3297414" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3366228" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32761312" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="JSF" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" visible="true" weight="0.015444015" />
+      <window_info anchor="right" id="Database" order="7" weight="0.17735043" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="CDI" order="10" />
+      <window_info anchor="right" id="Bean Validation" order="11" weight="0.32959402" />
+      <window_info anchor="right" id="Maven" order="12" visible="true" weight="0.115384616" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="das://99822b0b-c346-44bc-9650-2a018bd67663/schema/smppSmsDb/table/user" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/services/AdminServices/AdminRegisterServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="31" column="62" lean-forward="true" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/OutDTOs/msgSendResponseDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="39" column="21" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="21" />
+          <folding>
+            <element signature="e#964#965#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1011#1012#0" expanded="true" />
+            <element signature="e#1030#1031#0" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1141#1142#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/model/BulkMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="29" column="26" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="29" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/OutDTOs/GetSubscribesDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/OutDTOs/AllUsersLoginResponseDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/AdminEndPoints/RegisterAdminEndPoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="57" column="12" selection-start-line="54" selection-start-column="3" selection-end-line="57" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/OutDTOs/EthioTelLogListOutDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/dao/StaffDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/dao/RoleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/dao/CatagoryTableDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="46" column="33" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/services/BulkServices/SubscrptionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="63" column="98" selection-start-line="63" selection-start-column="87" selection-end-line="63" selection-end-column="98" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/GeneralEndPoints/GetGeneralEndPoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/SubscribtionEndPoints/GetSubscribtionEndPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/OutDTOs/SendPrivateMsgOutDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="33" />
+          <folding>
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/BulkEndPoints/InternalBulkSendEndPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/BulkEndPoints/UpdateBulkEndPoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/BulkEndPoints/SendBulkEndPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/BulkEndPoints/RegisterBulkEndPoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://99822b0b-c346-44bc-9650-2a018bd67663/schema/smppSmsDb/table/enternalBulk" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/BulkEndPoints/PrepareBulkEndPoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="61" lean-forward="true" selection-start-line="44" selection-start-column="61" selection-end-line="44" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/BulkEndPoints/InternalBulkPrepareEndPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#877#878#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/dao/BulkMessageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="50" selection-start-line="45" selection-start-column="4" selection-end-line="50" />
+          <folding>
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/model/MessageTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://99822b0b-c346-44bc-9650-2a018bd67663/schema/smppSmsDb/table/messageTable" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/AdminEndPoints/UpdateAdminEndPoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/InDTOs/InUpdateCatagoryDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="3" selection-end-line="4" />
+          <folding>
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/services/AdminServices/UpdateAdminServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://99822b0b-c346-44bc-9650-2a018bd67663/schema/smppSmsDb/table/catagoryTable" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/AdminEndPoints/SendPrivateMassageEndPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.base/java/util/Date.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/model/SubscribtionTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/AdminEndPoints/ReportEndPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/services/AdminServices/ReportService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/InDTOs/subscription/SubscriptionQueryDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+          <folding>
+            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/services/BulkServices/MessageSendService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="75" column="72" selection-start-line="75" selection-start-column="72" selection-end-line="75" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/InDTOs/subscription/SubscriptionDTOInt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="31" />
+          <folding>
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#266#267#0" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#442#443#0" expanded="true" />
+            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#546#547#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/AdminEndPoints/GetMessageToUpdateEndPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="57" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/dao/MessageTableDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/dao/SubscribtionTableDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="123" column="38" selection-start-line="123" selection-start-column="38" selection-end-line="123" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0-sources.jar!/javax/persistence/EntityManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="607" column="29" selection-start-line="607" selection-start-column="29" selection-end-line="607" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/services/AdminServices/SendPrivateMassageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/dao/BlackListDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://99822b0b-c346-44bc-9650-2a018bd67663/schema/smppSmsDb/table/subscribtionTable">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/services/BulkServices/PrepareMessageForSendService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="49" column="51" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/services/security/AuthRegisterServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/services/AdminServices/AdminGetServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="91" column="39" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://99822b0b-c346-44bc-9650-2a018bd67663/schema/smppSmsDb/table/bulkMessage">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://99822b0b-c346-44bc-9650-2a018bd67663/schema/smppSmsDb/table/blackList">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/et/com/smpp/EndPoints/AdminEndPoints/GetAdminEndPoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>smppSms</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
