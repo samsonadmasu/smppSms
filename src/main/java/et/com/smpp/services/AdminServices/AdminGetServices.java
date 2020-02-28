@@ -1,14 +1,9 @@
 package et.com.smpp.services.AdminServices;
 
-import et.com.smpp.OutDTOs.EthioTelLogListOutDTO;
-import et.com.smpp.OutDTOs.GetSubscribesDTO;
-import et.com.smpp.OutDTOs.OutGetCatagoryDTO;
-import et.com.smpp.OutDTOs.OutMessageDTO;
+import et.com.smpp.InDTOs.InUpdateCatagoryDTO;
+import et.com.smpp.OutDTOs.*;
 import et.com.smpp.dao.*;
-import et.com.smpp.model.BulkMessage;
-import et.com.smpp.model.CatagoryTable;
-import et.com.smpp.model.MessageTable;
-import et.com.smpp.model.SubscribtionTable;
+import et.com.smpp.model.*;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -44,9 +39,62 @@ public class AdminGetServices {
 
     public List<OutMessageDTO> listMessageByCatagory(Long id){
         List<OutMessageDTO> message = new ArrayList<OutMessageDTO>();
+
         List<MessageTable> messageList = this.messagetableDao.FindMessageByCatagoryID(id);
         messageList.forEach((item)->{
             message.add(new OutMessageDTO(item));
+        });
+        return message;
+    }
+
+
+    public List <OutCatagoryStatusDetail> listCatagoryWithStatus(){
+
+        List<OutCatagoryStatusDetail> message = new ArrayList<OutCatagoryStatusDetail>();
+        List<CatagoryTable> catagoryTables = this.CatagoryTableDao.listAll();
+
+        catagoryTables.forEach((item)->{
+              message.add(new OutCatagoryStatusDetail(item));
+        });
+        return message;
+    }
+
+
+
+
+    public List<OutConfirmationSendDTO> listUpdatedCatagorys(){
+
+        List<OutConfirmationSendDTO> message = new ArrayList<OutConfirmationSendDTO>();
+        OutConfirmationSendDTO outConfirmationSendDTO = new OutConfirmationSendDTO();
+
+        List<CatagoryTable> updatedCatagory = this.CatagoryTableDao.findByStatus();
+
+        updatedCatagory.forEach((item)->{
+            message.add(new OutConfirmationSendDTO(item));
+        });
+    return message;
+    }
+
+
+
+
+    public List<OutStaffDTO> listStaff(){
+        List<OutStaffDTO> message = new ArrayList<OutStaffDTO>();
+        List<Staff> messageList = this.staffDao.listAll();
+
+        messageList.forEach((item)->{
+            message.add(new OutStaffDTO(item));
+        });
+        return message;
+    }
+
+
+    public List<OutRoleDTO> listRole(){
+        List<OutRoleDTO> message = new ArrayList<OutRoleDTO>();
+        List<Role> messageList = this.roleDao.listAll();
+
+        messageList.forEach((item)->{
+            message.add(new OutRoleDTO(item));
         });
         return message;
     }

@@ -49,6 +49,30 @@ public class CatagoryTableDao {
 		return null;
 	}
 
+	public List<CatagoryTable> findByCurrentStatus(){
+
+		List<CatagoryTable> CatagoryTable =  em.createQuery("SELECT DISTINCT c FROM CatagoryTable c where c.currentActive = true", CatagoryTable.class)
+				.getResultList();
+
+
+			return CatagoryTable;
+
+	}
+
+
+
+
+
+	public List<CatagoryTable> findByStatus(){
+		TypedQuery<CatagoryTable> findAllQuery = em
+				.createQuery(
+						"SELECT DISTINCT c FROM CatagoryTable c where c.status = true",
+						CatagoryTable.class);
+		return findAllQuery.getResultList();
+	}
+
+
+
 	public List<CatagoryTable> listAll() {
 		TypedQuery<CatagoryTable> findAllQuery = em
 				.createQuery(

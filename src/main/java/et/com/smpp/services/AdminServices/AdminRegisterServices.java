@@ -1,10 +1,14 @@
 package et.com.smpp.services.AdminServices;
 
 import et.com.smpp.InDTOs.*;
+import et.com.smpp.InDTOs.subscription.InMessageTestDTO;
 import et.com.smpp.dao.*;
 import et.com.smpp.model.*;
+import et.com.smpp.services.security.AuthRegisterServices;
+
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.Date;
@@ -29,6 +33,13 @@ public class AdminRegisterServices {
     @EJB
     StaffDao staffDao;
 
+    @EJB
+    MessageTestDao messageTestDao;
+
+    @Inject
+    AuthRegisterServices authRegisterServices;
+
+
     @PersistenceContext(unitName = "smppSms-persistence-unit")
     private EntityManager em;
 
@@ -40,6 +51,16 @@ public class AdminRegisterServices {
             CatagoryTableDao.create(catagoryTable);
             inRegisterCatagoryDto.setId(catagoryTable.getId());
             return inRegisterCatagoryDto;
+    }
+
+    public InMessageTestDTO registerTest(InMessageTestDTO inMessageTestDTO){
+
+        MessageTest messageTest = new MessageTest();
+        messageTest.setCatagoryId(inMessageTestDTO.getCatagoryTable());
+        messageTest.setMessage(inMessageTestDTO.getMessage());
+        messageTest.setCurrDate(new Date());
+        this.messageTestDao.create(messageTest);
+        return inMessageTestDTO;
     }
 
     public InMessageRegisterDTO RegisterMessage(InMessageRegisterDTO inMessageRegisterDto) {
@@ -55,8 +76,10 @@ public class AdminRegisterServices {
 
     public InRegisterStaffDTO RegisterStaff(InRegisterStaffDTO inRegisterStaffDto) {
 
+
         Role role = this.roleDao.findById(inRegisterStaffDto.getRole());
          Staff staff = new Staff();
+
          staff.setFirstName(inRegisterStaffDto.getFirstName());
          staff.setLastName(inRegisterStaffDto.getLastName());
          staff.setUserName(inRegisterStaffDto.getUserName());
@@ -65,8 +88,13 @@ public class AdminRegisterServices {
          staff.setPhoneNumber(inRegisterStaffDto.getPhoneNumber());
          staff.setRole(role);
          staff.setStaffStatus(true);
-        this.staffDao.create(staff);
-
+//        if(inRegisterStaffDto.isRegistrationStatus()){
+//
+//            }
+//
+//         //registerStaffToAuto
+//        this.staffDao.create(staff);
+//
         return inRegisterStaffDto;
     }
 

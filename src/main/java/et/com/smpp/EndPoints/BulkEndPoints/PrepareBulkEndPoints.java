@@ -13,10 +13,7 @@ import javax.annotation.security.PermitAll;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.enterprise.context.RequestScoped;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import java.util.List;
 @RequestScoped
 @Path("/prepareBulk")
@@ -31,8 +28,8 @@ public class PrepareBulkEndPoints {
     @Produces("application/json")
     @Consumes("application/json")
     @PermitAll
-    public ResponseMessageDTO prepareSend(InFindByIdDTO inFindByIdDto){
-        return this.prepareMessageForSendService.PrepareBulk(inFindByIdDto);
+    public ResponseMessageDTO prepareSend(@QueryParam("id") long id){
+        return this.prepareMessageForSendService.PrepareBulk(id);
     }
 
 

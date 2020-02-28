@@ -3,6 +3,7 @@ package et.com.smpp.EndPoints.AdminEndPoints;
 import et.com.smpp.InDTOs.InUpdateCatagoryDTO;
 import et.com.smpp.InDTOs.InUpdateMessageDTO;
 import et.com.smpp.InDTOs.InUpdateStaffDTO;
+import et.com.smpp.InDTOs.UpdateCatagoryStatusDTO;
 import et.com.smpp.OutDTOs.ResponseMessageDTO;
 import et.com.smpp.services.AdminServices.UpdateAdminServices;
 import et.com.smpp.services.BulkServices.PrepareMessageForSendService;
@@ -42,6 +43,16 @@ public class UpdateAdminEndPoints {
     public InUpdateMessageDTO updaterMessage(InUpdateMessageDTO inUpdateMessageDto) {
         return this.updateAdminServices.updaterMessage(inUpdateMessageDto);
     }
+
+    @Path("/updateCatagoryIn")
+    @POST
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public UpdateCatagoryStatusDTO updateCatagoryInStatus(UpdateCatagoryStatusDTO updateCatagoryStatusDTO) {
+        return this.updateAdminServices.updateCatagoryInStatus(updateCatagoryStatusDTO);
+    }
+
 
     @Path("/updaterStaff")
     @POST

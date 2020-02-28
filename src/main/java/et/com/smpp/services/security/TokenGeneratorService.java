@@ -34,7 +34,7 @@ public class TokenGeneratorService {
 
         String role = authorities.get(0).toString();
         switch (role) {
-            case "Admin":
+            case "superAdmin":
             case "User":
                 return issueToken(user, role);
         }

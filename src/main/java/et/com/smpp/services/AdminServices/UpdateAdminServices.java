@@ -10,6 +10,7 @@ import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.Date;
 
 @Stateless
 public class UpdateAdminServices {
@@ -47,11 +48,24 @@ public class UpdateAdminServices {
       //  CatagoryTable CatagoryTable = this.CatagoryTableDao.findById(inUpdateMessageDto.getCatagoryTable());
         MessageTable messagetable = this.messagetableDao.findById(inUpdateMessageDto.getId());
 
-    //    messagetable.setCatagoryTable(CatagoryTable);
         messagetable.setMessage(inUpdateMessageDto.getMessage());
+        messagetable.setCurrDate(new Date());
          this.messagetableDao.update(messagetable);
         return inUpdateMessageDto;
     }
+
+
+    // important
+
+    public UpdateCatagoryStatusDTO updateCatagoryInStatus(UpdateCatagoryStatusDTO updateCatagoryStatusDTO) {
+
+        CatagoryTable CatagoryTable = this.CatagoryTableDao.findById(updateCatagoryStatusDTO.getId());
+        CatagoryTable.setCurrentActive(updateCatagoryStatusDTO.getCurrentActive());
+        this.CatagoryTableDao.update(CatagoryTable);
+        return updateCatagoryStatusDTO;
+    }
+
+
 
     public InUpdateStaffDTO updaterStaff(InUpdateStaffDTO inUpdateStaffDto) {
         Staff staff = this.staffDao.findById(inUpdateStaffDto.getId());

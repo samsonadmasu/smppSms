@@ -36,17 +36,11 @@ public class RoleDao {
 		return em.merge(entity);
 	}
 
-	public List<Role> listAll(Integer startPosition, Integer maxResult) {
+	public List<Role> listAll() {
 		TypedQuery<Role> findAllQuery = em
 				.createQuery(
 						"SELECT DISTINCT r FROM Role r LEFT JOIN FETCH r.staffs ORDER BY r.id",
 						Role.class);
-		if (startPosition != null) {
-			findAllQuery.setFirstResult(startPosition);
-		}
-		if (maxResult != null) {
-			findAllQuery.setMaxResults(maxResult);
-		}
 		return findAllQuery.getResultList();
 	}
 }

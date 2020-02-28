@@ -1,16 +1,12 @@
 package et.com.smpp.model;
-// Generated Aug 20, 2019 2:50:16 PM by Hibernate Tools 5.2.11.Final
+// Generated Feb 28, 2020 3:26:37 PM by Hibernate Tools 5.2.11.Final
 
 
-import java.util.HashSet;
-import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -26,17 +22,21 @@ public class CatagoryTable  implements java.io.Serializable {
      private Long id;
      private String catagoryName;
      private String representative;
-     private Set<SubscribtionTable> subscribtionTables = new HashSet<SubscribtionTable>(0);
-     private Set<MessageTable> messageTables = new HashSet<MessageTable>(0);
+     private boolean status;
+     private Boolean currentActive;
 
     public CatagoryTable() {
     }
 
-    public CatagoryTable(String catagoryName, String representative, Set<SubscribtionTable> subscribtionTables, Set<MessageTable> messageTables) {
+	
+    public CatagoryTable(boolean status) {
+        this.status = status;
+    }
+    public CatagoryTable(String catagoryName, String representative, boolean status, Boolean currentActive) {
        this.catagoryName = catagoryName;
        this.representative = representative;
-       this.subscribtionTables = subscribtionTables;
-       this.messageTables = messageTables;
+       this.status = status;
+       this.currentActive = currentActive;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -71,22 +71,24 @@ public class CatagoryTable  implements java.io.Serializable {
         this.representative = representative;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="catagoryTable")
-    public Set<SubscribtionTable> getSubscribtionTables() {
-        return this.subscribtionTables;
+    
+    @Column(name="Status", nullable=false)
+    public boolean isStatus() {
+        return this.status;
     }
     
-    public void setSubscribtionTables(Set<SubscribtionTable> subscribtionTables) {
-        this.subscribtionTables = subscribtionTables;
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="catagoryTable")
-    public Set<MessageTable> getMessageTables() {
-        return this.messageTables;
+    
+    @Column(name="currentActive")
+    public Boolean getCurrentActive() {
+        return this.currentActive;
     }
     
-    public void setMessageTables(Set<MessageTable> messageTables) {
-        this.messageTables = messageTables;
+    public void setCurrentActive(Boolean currentActive) {
+        this.currentActive = currentActive;
     }
 
 

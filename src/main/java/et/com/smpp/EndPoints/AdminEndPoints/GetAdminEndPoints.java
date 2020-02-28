@@ -1,9 +1,7 @@
 package et.com.smpp.EndPoints.AdminEndPoints;
-import et.com.smpp.OutDTOs.EthioTelLogListOutDTO;
-import et.com.smpp.OutDTOs.GetSubscribesDTO;
-import et.com.smpp.OutDTOs.OutGetCatagoryDTO;
-import et.com.smpp.OutDTOs.OutMessageDTO;
+import et.com.smpp.OutDTOs.*;
 import et.com.smpp.services.AdminServices.AdminGetServices;
+import et.com.smpp.services.security.getUserService;
 import io.swagger.annotations.Api;
 import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
@@ -26,14 +24,38 @@ public class GetAdminEndPoints {
     @EJB
     AdminGetServices adminGetServices;
 
+
     @Path("/listCatagory")
     @GET
     @Produces("application/json")
     @Consumes("application/json")
-    @RolesAllowed("Admin")
+    @PermitAll
     public List<OutGetCatagoryDTO> listCatagory() {
         {
             return this.adminGetServices.listCatagory();
+        }
+    }
+
+    @Path("/listRoles")
+    @GET
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public List<OutRoleDTO> listRole() {
+        {
+            return this.adminGetServices.listRole();
+        }
+    }
+
+
+    @Path("/listStaff")
+    @GET
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public List<OutStaffDTO> listStaff(){
+        {
+            return this.adminGetServices.listStaff();
         }
     }
 
@@ -47,6 +69,31 @@ public class GetAdminEndPoints {
             return this.adminGetServices.listMessage();
         }
     }
+
+    @Path("/ListCatagorywithStatus")
+    @GET
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public List<OutCatagoryStatusDetail> listCatagoryWithStatus(){
+        {
+            return this.adminGetServices.listCatagoryWithStatus();
+        }
+    }
+
+
+    @Path("/listUpdatedCatagory")
+    @GET
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public List<OutConfirmationSendDTO> listUpdatedCatagorys(){
+        {
+            return this.adminGetServices.listUpdatedCatagorys();
+        }
+    }
+
+
 
     @Path("/listSubscriberActive")
     @GET

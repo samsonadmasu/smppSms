@@ -7,6 +7,7 @@ com/cassiomolin/security/api/exeptionmapper/InvalidAuthenticationExceptionMapper
 com/cassiomolin/security/api/exeptionmapper/AuthenticationTokenRefreshmentExceptionMapper.class
 et/com/smpp/InDTOs/InBulkSMSDTO.class
 com/cassiomolin/common/api/model/ApiErrorDetails.class
+et/com/smpp/InDTOs/subscription/InMessageTestDTO.class
 et/com/smpp/OutDTOs/OutEnternalBulkDTO.class
 et/com/smpp/EndPoints/AdminEndPoints/ReportEndPoint.class
 et/com/smpp/model/Role.class
@@ -20,6 +21,7 @@ com/cassiomolin/security/exception/AuthenticationException.class
 et/com/smpp/model/CatagoryTable.class
 et/com/smpp/rest/AuthenticationResource.class
 com/cassiomolin/user/api/resource/UserResource.class
+et/com/smpp/OutDTOs/OutConfirmationSendDTO.class
 et/com/smpp/dao/MessageTableDao.class
 et/com/smpp/InDTOs/passwordResetRequestDTO.class
 et/com/smpp/services/security/TokenGeneratorService.class
@@ -38,6 +40,7 @@ et/com/smpp/model/NamedParameterList.class
 et/com/smpp/services/security/PasswordResetService.class
 et/com/smpp/model/Staff.class
 et/com/smpp/dao/BlackListDao.class
+et/com/smpp/OutDTOs/OutCatagoryStatusDetail.class
 et/com/smpp/InDTOs/InEnternalBulkDTO.class
 com/cassiomolin/security/service/AuthenticationTokenSettings.class
 et/com/smpp/InDTOs/InMessageRegisterDTO.class
@@ -56,6 +59,7 @@ et/com/smpp/dao/StaffDao.class
 com/cassiomolin/common/configuration/Configurable.class
 et/com/smpp/InDTOs/InRegisterStaffDTO.class
 et/com/smpp/OutDTOs/OutMessageDTO.class
+et/com/smpp/InDTOs/UpdateCatagoryStatusDTO.class
 et/com/smpp/OutDTOs/GetSubscribesDTO.class
 com/cassiomolin/security/service/AuthenticationTokenParser.class
 com/cassiomolin/security/api/TokenBasedSecurityContext.class
@@ -65,6 +69,7 @@ com/cassiomolin/user/domain/User.class
 et/com/smpp/model/Passwordhistory.class
 et/com/smpp/model/EnternalBulk.class
 et/com/smpp/services/BulkServices/PrepareMessageForSendService.class
+et/com/smpp/model/MessageTest.class
 et/com/smpp/EndPoints/BulkEndPoints/SendBulkEndPoint.class
 et/com/smpp/dao/EnternalBulkDao.class
 et/com/smpp/rest/passwordResetEndPoint.class
@@ -74,6 +79,7 @@ et/com/smpp/dao/SubscribtionTableDao.class
 et/com/smpp/services/AdminServices/ReportService.class
 et/com/smpp/OutDTOs/OutGetCatagoryDTO.class
 et/com/smpp/InDTOs/InUpdateCatagoryDTO.class
+et/com/smpp/OutDTOs/OutRoleDTO.class
 com/cassiomolin/security/domain/Authority.class
 et/com/smpp/EndPoints/BulkEndPoints/PrepareBulkEndPoints.class
 et/com/smpp/model/SyncOrderRelationDump.class
@@ -91,12 +97,14 @@ com/cassiomolin/security/api/AuthenticationTokenDetails.class
 et/com/smpp/model/SubscribtionTable.class
 et/com/smpp/EndPoints/GeneralEndPoints/GetGeneralEndPoints.class
 et/com/smpp/InDTOs/InSubscriptioDTO.class
+et/com/smpp/dao/MessageTestDao.class
 et/com/smpp/EndPoints/BulkEndPoints/RegisterBulkEndPoints.class
 et/com/smpp/services/AdminServices/UpdateAdminServices.class
 com/cassiomolin/security/api/AuthenticationTokenDetails$1.class
 com/cassiomolin/user/service/UserService.class
 et/com/smpp/InDTOs/InFindByIdDTO.class
 et/com/smpp/InDTOs/InUpdateStaffDTO.class
+et/com/smpp/services/security/getUserService.class
 et/com/smpp/services/AdminServices/AdminGetServices.class
 et/com/smpp/OutDTOs/OutStaffDTO.class
 et/com/smpp/EndPoints/AdminEndPoints/GetMessageToUpdateEndPoint.class

@@ -38,17 +38,11 @@ public class StaffDao {
 
 
 
-	public List<Staff> listAll(Integer startPosition, Integer maxResult) {
+	public List<Staff> listAll() {
 		TypedQuery<Staff> findAllQuery = em
 				.createQuery(
 						"SELECT DISTINCT s FROM Staff s LEFT JOIN FETCH s.role ORDER BY s.id",
 						Staff.class);
-		if (startPosition != null) {
-			findAllQuery.setFirstResult(startPosition);
-		}
-		if (maxResult != null) {
-			findAllQuery.setMaxResults(maxResult);
-		}
-		return findAllQuery.getResultList();
+			return findAllQuery.getResultList();
 	}
 }
