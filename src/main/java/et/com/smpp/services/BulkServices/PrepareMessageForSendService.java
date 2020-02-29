@@ -41,6 +41,9 @@ public class PrepareMessageForSendService {
 
     @EJB
     CatagoryTableDao catagoryTableDao;
+
+    @EJB
+    InternalBulkDao internalBulkDao;
     @PersistenceContext(unitName = "smppSms-persistence-unit")
     private EntityManager em;
 
@@ -84,38 +87,62 @@ public class PrepareMessageForSendService {
 
 
 
-    public ResponseMessageDTO PrepareInternalBulk() {
+    public ResponseMessageDTO PrepareInternalBulk(long id) {
+
+        InternalBulk internalBulk = this.internalBulkDao.findById(id);
 
         try {
             List<SubscribtionTable> subscribtiontable = this.subscribtiontableDao.findByCatagoryInternalBulk();
               subscribtiontable.forEach(item -> {
                BulkMessage bulkTwo = new BulkMessage();
-                bulkTwo.setMessageBody(message);
+                bulkTwo.setMessageBody(internalBulk.getMessage());
                  bulkTwo.setPhoneNumber(item.getPhoneNumber());
                 bulkTwo.setSentStatus(false);
                 bulkTwo.setSend(false);
                 bulkTwo.setSentTime(new Date());
                 this.BulkMessageDao.create(bulkTwo);
            });
+            update(internalBulk);
             return new ResponseMessageDTO(true, "yes!");
         } catch (Exception e) {
             return new ResponseMessageDTO(false, "no!");
         }
     }
 
+    private void update(InternalBulk internalBulk){
+        internalBulk.setPreparedStatus(true);
+        this.internalBulkDao.create(internalBulk);
+    }
 
-
-
-    public ResponseMessageDTO Send() {
+    public ResponseMessageDTO SendInternalBulk() {
         try {
-
             List<BulkMessage> BulkMessage = this.BulkMessageDao.prepareForSend();
-
             BulkMessage.forEach(item->{
                 item.setSend(true);
                 this.BulkMessageDao.update(item);
             });
 
+
+            List<InternalBulk> internalBulks = this.internalBulkDao.listAll();
+            internalBulks.forEach(item->{
+                item.setPreparedStatus(false);
+                this.internalBulkDao.create(item);
+            });
+
+
+            return new ResponseMessageDTO(true, "yes!");
+        } catch (Exception e) {
+            return new ResponseMessageDTO(false, "no!");
+        }
+    }
+
+    public ResponseMessageDTO Send() {
+        try {
+            List<BulkMessage> BulkMessage = this.BulkMessageDao.prepareForSend();
+            BulkMessage.forEach(item->{
+                item.setSend(true);
+                this.BulkMessageDao.update(item);
+            });
             List<CatagoryTable> catagoryTable = this.catagoryTableDao.listAll();
             catagoryTable.forEach(item->{
                 item.setStatus(false);

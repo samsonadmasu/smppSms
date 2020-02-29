@@ -55,7 +55,7 @@ public class SendPrivateMassageService {
     private void sendSMS(String message, String phone) throws Exception
     {
         String cleanPhone = cleanPhone(phone);
-        String url = "http://172.16.0.2:13013/cgi-bin/sendsms?username=atlas&password=atlas@1234&from=8748&&to=" + cleanPhone+"&text=" + URLEncoder.encode(message);
+        String url = "http://196.189.53.129:12213/cgi-bin/sendsms?username=atlas&password=atlas@1234&from=8748&&to=" + cleanPhone+"&text=" + URLEncoder.encode(message);
         URL obj = new URL(url);
 
         HttpURLConnection con = (HttpURLConnection)obj.openConnection();

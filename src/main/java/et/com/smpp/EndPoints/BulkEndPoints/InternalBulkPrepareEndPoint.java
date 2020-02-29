@@ -7,10 +7,7 @@ import io.swagger.annotations.Api;
 import javax.annotation.security.PermitAll;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 
 @RequestScoped
 @Path("/prepareInternalBulk")
@@ -25,7 +22,7 @@ public class InternalBulkPrepareEndPoint {
     @Produces("application/json")
     @Consumes("application/json")
     @PermitAll
-    public ResponseMessageDTO PrepareInternalBulk() {
-        return this.prepareMessageForSendService.PrepareInternalBulk();
+    public ResponseMessageDTO PrepareInternalBulk(@QueryParam("id") long id) {
+        return this.prepareMessageForSendService.PrepareInternalBulk(id);
     }
 }

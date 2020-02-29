@@ -1,4 +1,5 @@
 package et.com.smpp.EndPoints.AdminEndPoints;
+import et.com.smpp.InDTOs.InRegisterInternalBulkDTO;
 import et.com.smpp.OutDTOs.*;
 import et.com.smpp.services.AdminServices.AdminGetServices;
 import et.com.smpp.services.security.getUserService;
@@ -94,6 +95,18 @@ public class GetAdminEndPoints {
     }
 
 
+    @Path("/listInternalBulkMsg")
+    @GET
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public List<OutListInternalBulkDTO> lisInternalBulks(){
+        {
+            return this.adminGetServices.lisInternalBulks();
+        }
+    }
+
+
 
     @Path("/listSubscriberActive")
     @GET
@@ -119,14 +132,4 @@ public class GetAdminEndPoints {
 
 
 
-    @Path("/ethioTelLogListOut")
-    @GET
-    @Produces("application/json")
-    @Consumes("application/json")
-    @PermitAll
-    public List<EthioTelLogListOutDTO> ethioTelLogListOut(@QueryParam("phoneNumber") String phoneNumber){
-        {
-            return this.adminGetServices.ethioTelLogListOut(phoneNumber);
-        }
-    }
 }

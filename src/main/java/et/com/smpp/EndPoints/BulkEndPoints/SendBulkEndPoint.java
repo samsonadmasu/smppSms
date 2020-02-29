@@ -28,4 +28,14 @@ public class SendBulkEndPoint {
         return this.prepareMessageForSendService.Send();
     }
 
+
+    @Path("/SendInternalBulk")
+    @POST
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public ResponseMessageDTO mangeSendInternalBulk() {
+        return this.prepareMessageForSendService.SendInternalBulk();
+    }
+
 }

@@ -36,6 +36,4 @@ public class SendPrivateMassageEndPoint {
             return this.sendPrivateMassageService.sendPrivateMsgOutDTO(sendPrivateMsgOutDTO);
         }
     }
-    //@QueryParam("phoneNumber") String phoneNumber,
-    //                                                     @QueryParam("phoneNumber") String message
 }

@@ -1,9 +1,6 @@
 package et.com.smpp.EndPoints.AdminEndPoints;
 
-import et.com.smpp.InDTOs.InMessageRegisterDTO;
-import et.com.smpp.InDTOs.InRegisterCatagoryDTO;
-import et.com.smpp.InDTOs.InRegisterRoleDTO;
-import et.com.smpp.InDTOs.InRegisterStaffDTO;
+import et.com.smpp.InDTOs.*;
 import et.com.smpp.InDTOs.subscription.InMessageTestDTO;
 import et.com.smpp.services.AdminServices.AdminRegisterServices;
 import et.com.smpp.services.security.AuthRegisterServices;
@@ -34,10 +31,21 @@ public class RegisterAdminEndPoints {
     @POST
     @Produces("application/json")
     @Consumes("application/json")
-    @RolesAllowed("Admin")
+    @PermitAll
     public InRegisterCatagoryDTO RegisterCatagory(InRegisterCatagoryDTO inRegisterCatagoryDto) {
         return this.adminRegisterServices.RegisterCatagory(inRegisterCatagoryDto);
     }
+
+
+    @Path("/RegisterInternalBulk")
+    @POST
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public InRegisterInternalBulkDTO RegisterInternalBulk(InRegisterInternalBulkDTO inRegisterInternalBulkDTO) {
+        return this.adminRegisterServices.RegisterInternalBulk(inRegisterInternalBulkDTO);
+    }
+
 
     @Path("/RegisterMessage")
     @POST
@@ -57,16 +65,6 @@ public class RegisterAdminEndPoints {
         return this.adminRegisterServices.registerTest(inMessageTestDTO);
     }
 
-
-    /*
-    * if(staffregisterdtoM.isRegistrationStatus())
-	{
-      return this.authRegisterServices.registerHospitalAdminToAuth(staffregisterdtoM);
-	}
-		else
-			return staffregisterdtoM;
-	}
-    * */
 
 
     @Path("/RegisterStaff")

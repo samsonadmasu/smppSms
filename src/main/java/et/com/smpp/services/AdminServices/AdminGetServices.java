@@ -1,5 +1,6 @@
 package et.com.smpp.services.AdminServices;
 
+import et.com.smpp.InDTOs.InRegisterInternalBulkDTO;
 import et.com.smpp.InDTOs.InUpdateCatagoryDTO;
 import et.com.smpp.OutDTOs.*;
 import et.com.smpp.dao.*;
@@ -33,6 +34,8 @@ public class AdminGetServices {
     @EJB
     StaffDao staffDao;
 
+    @EJB
+    InternalBulkDao internalBulkDao;
     @PersistenceContext(unitName = "smppSms-persistence-unit")
     private EntityManager em;
 
@@ -126,6 +129,18 @@ public class AdminGetServices {
         });
         return subscriber;
     }
+
+
+    public List<OutListInternalBulkDTO> lisInternalBulks(){
+        List<OutListInternalBulkDTO> subscriber = new ArrayList<OutListInternalBulkDTO>();
+        List<InternalBulk> subscriberList = this.internalBulkDao.listAll();
+        subscriberList.forEach((item)->{
+            subscriber.add(new OutListInternalBulkDTO(item));
+        });
+        return subscriber;
+    }
+
+
 
     public List<GetSubscribesDTO> listSubscriberDeactive(){
         List<GetSubscribesDTO> subscriber = new ArrayList<GetSubscribesDTO>();

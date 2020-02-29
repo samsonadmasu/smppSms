@@ -3,6 +3,7 @@ package et.com.smpp.services.AdminServices;
 import et.com.smpp.InDTOs.*;
 import et.com.smpp.dao.*;
 import et.com.smpp.model.CatagoryTable;
+import et.com.smpp.model.InternalBulk;
 import et.com.smpp.model.MessageTable;
 import et.com.smpp.model.Staff;
 
@@ -31,6 +32,11 @@ public class UpdateAdminServices {
 
     @EJB
     StaffDao staffDao;
+
+
+    @EJB
+    InternalBulkDao internalBulkDao;
+
     @PersistenceContext(unitName = "smppSms-persistence-unit")
     private EntityManager em;
 
@@ -63,6 +69,15 @@ public class UpdateAdminServices {
         CatagoryTable.setCurrentActive(updateCatagoryStatusDTO.getCurrentActive());
         this.CatagoryTableDao.update(CatagoryTable);
         return updateCatagoryStatusDTO;
+    }
+
+
+    public InRegisterInternalBulkDTO updateInternalBulk(InRegisterInternalBulkDTO inRegisterInternalBulkDTO) {
+
+        InternalBulk CatagoryTable = this.internalBulkDao.findById(inRegisterInternalBulkDTO.getId());
+        CatagoryTable.setMessage(inRegisterInternalBulkDTO.getMessage());
+        this.internalBulkDao.update(CatagoryTable);
+        return inRegisterInternalBulkDTO;
     }
 
 

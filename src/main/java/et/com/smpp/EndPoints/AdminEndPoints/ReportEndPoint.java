@@ -2,6 +2,7 @@ package et.com.smpp.EndPoints.AdminEndPoints;
 
 import et.com.smpp.InDTOs.subscription.SubscriptionDTOInt;
 import et.com.smpp.InDTOs.subscription.SubscriptionQueryDTO;
+import et.com.smpp.OutDTOs.EthioTelLogListOutDTO;
 import et.com.smpp.services.AdminServices.AdminGetServices;
 import et.com.smpp.services.AdminServices.ReportService;
 import io.swagger.annotations.Api;
@@ -12,6 +13,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.ws.rs.*;
+import java.util.List;
 
 @RequestScoped
 @Path("/Report")
@@ -27,6 +29,17 @@ public class ReportEndPoint {
     @EJB
     ReportService reportService;
 
+
+    @Path("/ethioTelLogListOut")
+    @GET
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public List<EthioTelLogListOutDTO> ethioTelLogListOut(@QueryParam("phoneNumber") String phoneNumber){
+        {
+            return this.adminGetServices.ethioTelLogListOut(phoneNumber);
+        }
+    }
 
     //all
     @Path("/CountSubscribersAll")

@@ -39,19 +39,41 @@ public class AdminRegisterServices {
     @Inject
     AuthRegisterServices authRegisterServices;
 
+@EJB
+InternalBulkDao internalBulkDao;
 
-    @PersistenceContext(unitName = "smppSms-persistence-unit")
+
+@PersistenceContext(unitName = "smppSms-persistence-unit")
     private EntityManager em;
 
     public InRegisterCatagoryDTO RegisterCatagory(InRegisterCatagoryDTO inRegisterCatagoryDto) {
 
             CatagoryTable catagoryTable = new CatagoryTable();
+
             catagoryTable.setCatagoryName(inRegisterCatagoryDto.getCatagoryName());
             catagoryTable.setRepresentative(inRegisterCatagoryDto.getRepresentative());
+            catagoryTable.setStatus(false);
+            catagoryTable.setCurrentActive(false);
+
             CatagoryTableDao.create(catagoryTable);
             inRegisterCatagoryDto.setId(catagoryTable.getId());
             return inRegisterCatagoryDto;
     }
+
+
+    public InRegisterInternalBulkDTO RegisterInternalBulk(InRegisterInternalBulkDTO inRegisterInternalBulkDTO) {
+
+        InternalBulk internalBulk = new InternalBulk();
+        internalBulk.setMessage(inRegisterInternalBulkDTO.getMessage());
+        internalBulk.setPreparedStatus(false);
+        internalBulkDao.create(internalBulk);
+
+        inRegisterInternalBulkDTO.setId(internalBulk.getId());
+        return inRegisterInternalBulkDTO;
+    }
+
+
+
 
     public InMessageTestDTO registerTest(InMessageTestDTO inMessageTestDTO){
 
