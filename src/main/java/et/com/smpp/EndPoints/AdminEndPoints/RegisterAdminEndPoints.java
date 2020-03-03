@@ -3,16 +3,20 @@ package et.com.smpp.EndPoints.AdminEndPoints;
 import et.com.smpp.InDTOs.*;
 import et.com.smpp.InDTOs.subscription.InMessageTestDTO;
 import et.com.smpp.services.AdminServices.AdminRegisterServices;
+import et.com.smpp.services.AdminServices.DataMapper;
 import et.com.smpp.services.security.AuthRegisterServices;
 import io.swagger.annotations.Api;
+import org.jboss.resteasy.annotations.providers.multipart.MultipartForm;
 
 import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
+import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.ws.rs.*;
+import java.util.List;
 
 @RequestScoped
 @Path("/Subscription")
@@ -26,6 +30,9 @@ public class RegisterAdminEndPoints {
 
     @Inject
     AuthRegisterServices authRegisterServices;
+
+    @EJB
+    DataMapper dataMapper;
 
     @Path("/RegisterCatagory")
     @POST
@@ -97,4 +104,14 @@ public class RegisterAdminEndPoints {
         return this.adminRegisterServices.registerBlackList(inBlackListDTO);
     }
 
+
+    // upload excel
+    @Path("/listPhoneNumber")
+    @POST
+    @Produces("application/json")
+    @Consumes("multipart/form-data")
+    @PermitAll
+    public List<PhoneNumber> listPhoneNumber(@MultipartForm FileUploadForm form) {
+        return this.dataMapper.listPhoneNumber(form);
+    }
 }
