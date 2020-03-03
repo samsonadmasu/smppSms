@@ -1,7 +1,7 @@
 package et.com.smpp.dao;
 
 import et.com.smpp.model.BulkMessage;
-
+import java.util.Date;
 import java.util.List;
 
 import javax.ejb.Stateless;
@@ -61,6 +61,16 @@ public class BulkMessageDao {
 			return false;
 		}
 		return true;
+	}
+
+
+    public int listCatagoryandCount(long catagory){
+	    Date date = new Date();
+	    TypedQuery<BulkMessage> findAllQuery = em.createQuery("SELECT DISTINCT h FROM BulkMessage h where h.catagory =:id AND h.sentStatus = false AND h.sentTime=:date", BulkMessage.class);
+         findAllQuery.setParameter("catagory", catagory);
+         findAllQuery.setParameter("date", date);
+
+	    return findAllQuery.getResultList().size();
 	}
 
 

@@ -33,7 +33,6 @@ public class ReportService {
     private EntityManager em;
 
 
-
     // all
     public int countSubscribersAll(){
         int subscriberList = this.subscribtiontableDao.countSubscribersALL();
@@ -84,15 +83,6 @@ public class ReportService {
 
     }
 
-//SELECT e FROM Events e WHERE e.eventsDate BETWEEN :startDate AND :endDate
-
-    //weak all
-//    public int countSubscribersWeeklyAll(){
-//        int subscriberList = this.subscribtiontableDao.countSubscribersAllByCatagory();
-//        return subscriberList;
-//    }
-
-
     // dailly by catagory
     public int countSubscribersDailyByCatagory(Long id){
         int subscriberList = this.subscribtiontableDao.countSubscribersDailyByCatagory(id);
@@ -103,6 +93,13 @@ public class ReportService {
     public int countSubscribersDailyAll(){
         int subscriberList = this.subscribtiontableDao.countSubscribersDailyAll();
         return subscriberList;
+    }
+
+
+
+    public int countPreparedById(long catagory){
+        int prepared = this.BulkMessageDao.listCatagoryandCount(catagory);
+        return prepared;
     }
 
 }

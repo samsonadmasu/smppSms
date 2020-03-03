@@ -1,5 +1,5 @@
 package et.com.smpp.model;
-// Generated Mar 3, 2020 11:01:00 AM by Hibernate Tools 5.2.11.Final
+// Generated Mar 3, 2020 11:39:58 AM by Hibernate Tools 5.2.11.Final
 
 
 import java.util.Date;
@@ -28,7 +28,7 @@ public class BulkMessage  implements java.io.Serializable {
      private Date sentTime;
      private boolean sentStatus;
      private boolean send;
-     private String catagory;
+     private Long catagory;
 
     public BulkMessage() {
     }
@@ -39,7 +39,7 @@ public class BulkMessage  implements java.io.Serializable {
         this.sentStatus = sentStatus;
         this.send = send;
     }
-    public BulkMessage(String phoneNumber, String messageBody, Date sentTime, boolean sentStatus, boolean send, String catagory) {
+    public BulkMessage(String phoneNumber, String messageBody, Date sentTime, boolean sentStatus, boolean send, Long catagory) {
        this.phoneNumber = phoneNumber;
        this.messageBody = messageBody;
        this.sentTime = sentTime;
@@ -111,12 +111,12 @@ public class BulkMessage  implements java.io.Serializable {
     }
 
     
-    @Column(name="catagory", length=16777215)
-    public String getCatagory() {
+    @Column(name="catagory")
+    public Long getCatagory() {
         return this.catagory;
     }
     
-    public void setCatagory(String catagory) {
+    public void setCatagory(Long catagory) {
         this.catagory = catagory;
     }
 

@@ -164,4 +164,18 @@ public class ReportEndPoint {
         }
     }
 
+
+
+    //count prepared
+    @Path("/countSubscribersBetweenByCatagory")
+    @POST
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public int countSubscribersBetweenByCatagory(@QueryParam("catagory") Long catagory){
+        {
+            return this.reportService.countPreparedById(catagory);
+        }
+    }
+
 }

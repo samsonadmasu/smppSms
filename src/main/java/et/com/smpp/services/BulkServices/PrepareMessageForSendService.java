@@ -69,6 +69,7 @@ public class PrepareMessageForSendService {
                                     bulkTwo.setSentStatus(false);
                                     bulkTwo.setSend(false);
                                     bulkTwo.setSentTime(new Date());
+                                     bulkTwo.setCatagory(item.getCatagoryTable().getId());
 
                                     this.BulkMessageDao.create(bulkTwo);
                             }

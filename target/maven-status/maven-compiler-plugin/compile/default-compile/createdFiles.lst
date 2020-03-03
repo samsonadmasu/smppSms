@@ -10,6 +10,7 @@ com/cassiomolin/common/api/model/ApiErrorDetails.class
 et/com/smpp/InDTOs/subscription/InMessageTestDTO.class
 et/com/smpp/OutDTOs/OutEnternalBulkDTO.class
 et/com/smpp/EndPoints/AdminEndPoints/ReportEndPoint.class
+et/com/smpp/OutDTOs/OutBlackListDTO.class
 et/com/smpp/model/Role.class
 et/com/smpp/services/BulkServices/MessageSendService.class
 com/cassiomolin/common/api/provider/ObjectMapperProvider.class
@@ -21,6 +22,7 @@ com/cassiomolin/security/exception/AuthenticationException.class
 et/com/smpp/model/CatagoryTable.class
 et/com/smpp/rest/AuthenticationResource.class
 com/cassiomolin/user/api/resource/UserResource.class
+et/com/smpp/InDTOs/InBlackListDTO.class
 et/com/smpp/OutDTOs/OutConfirmationSendDTO.class
 et/com/smpp/dao/MessageTableDao.class
 et/com/smpp/InDTOs/passwordResetRequestDTO.class
@@ -53,6 +55,7 @@ com/cassiomolin/security/api/model/UserCredentials.class
 et/com/smpp/dao/NamedParameterListDao.class
 com/cassiomolin/common/configuration/ConfigurationProducer.class
 et/com/smpp/services/AdminServices/AdminRegisterServices.class
+et/com/smpp/OutDTOs/OutReportPreparedMessageDTO.class
 et/com/smpp/dao/BulkMessageDao.class
 com/cassiomolin/security/api/filter/AuthenticationFilter.class
 et/com/smpp/dao/StaffDao.class
@@ -83,6 +86,7 @@ et/com/smpp/OutDTOs/OutGetCatagoryDTO.class
 et/com/smpp/InDTOs/InUpdateCatagoryDTO.class
 et/com/smpp/OutDTOs/OutRoleDTO.class
 com/cassiomolin/security/domain/Authority.class
+et/com/smpp/DeleteDTO/DeleteFromBlacklistDTO.class
 et/com/smpp/EndPoints/BulkEndPoints/PrepareBulkEndPoints.class
 et/com/smpp/model/SyncOrderRelationDump.class
 et/com/smpp/InDTOs/InRegisterInternalBulkDTO.class
@@ -110,6 +114,7 @@ et/com/smpp/InDTOs/InUpdateStaffDTO.class
 et/com/smpp/services/security/getUserService.class
 et/com/smpp/services/AdminServices/AdminGetServices.class
 et/com/smpp/OutDTOs/OutStaffDTO.class
+et/com/smpp/OutDTOs/OutReportSentMessageDTO.class
 et/com/smpp/EndPoints/AdminEndPoints/GetMessageToUpdateEndPoint.class
 et/com/smpp/dao/SyncOrderRelationDumpDao.class
 et/com/smpp/EndPoints/AdminEndPoints/GetAdminEndPoints.class
@@ -119,6 +124,7 @@ com/cassiomolin/security/api/exeptionmapper/AccessDeniedExceptionMapper.class
 et/com/smpp/services/security/AuthRegisterServices.class
 et/com/smpp/EndPoints/GeneralEndPoints/UpdateGeneralEndPoints.class
 et/com/smpp/OutDTOs/SendPrivateMsgOutDTO.class
+et/com/smpp/OutDTOs/OutUpdateCatagoryStatusDTO.class
 com/cassiomolin/user/domain/UserAuthority.class
 et/com/smpp/OutDTOs/OutCounResultDTO.class
 et/com/smpp/InDTOs/InRegisterCatagoryDTO.class
