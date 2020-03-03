@@ -87,4 +87,14 @@ public class RegisterAdminEndPoints {
     public InRegisterRoleDTO RegisterRole(InRegisterRoleDTO inRegisterRoleDto) {
         return this.adminRegisterServices.RegisterRole(inRegisterRoleDto);
     }
+
+    @Path("/registerBlackList")
+    @POST
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public InBlackListDTO registerBlackList(InBlackListDTO inBlackListDTO){
+        return this.adminRegisterServices.registerBlackList(inBlackListDTO);
+    }
+
 }

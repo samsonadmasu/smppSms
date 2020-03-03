@@ -92,7 +92,6 @@ public class ReportEndPoint {
 
 
 //Month
-
     @Path("/countSubscribersmonthlyAll")
     @GET
     @Produces("application/json")
@@ -164,8 +163,5 @@ public class ReportEndPoint {
             return this.reportService.countSubscribersBetweenByCatagory(subscriptionDTOInt.getId(),subscriptionDTOInt.getStartDate(),subscriptionDTOInt.getEndDate());
         }
     }
-
-
-
 
 }

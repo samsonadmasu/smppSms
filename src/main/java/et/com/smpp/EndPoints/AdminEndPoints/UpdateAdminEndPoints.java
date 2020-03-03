@@ -1,6 +1,8 @@
 package et.com.smpp.EndPoints.AdminEndPoints;
 
+import et.com.smpp.DeleteDTO.DeleteFromBlacklistDTO;
 import et.com.smpp.InDTOs.*;
+import et.com.smpp.OutDTOs.OutUpdateCatagoryStatusDTO;
 import et.com.smpp.OutDTOs.ResponseMessageDTO;
 import et.com.smpp.services.AdminServices.UpdateAdminServices;
 import et.com.smpp.services.BulkServices.PrepareMessageForSendService;
@@ -68,4 +70,27 @@ public class UpdateAdminEndPoints {
     public InUpdateStaffDTO updaterStaff(InUpdateStaffDTO inUpdateStaffDto) {
         return this.updateAdminServices.updaterStaff(inUpdateStaffDto);
     }
+
+
+    //remove number from blacklist
+    @Path("/deleteBlacklist")
+    @POST
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public ResponseMessageDTO deleteBlacklist(DeleteFromBlacklistDTO deleteFromBlackListDTO) {
+        return this.updateAdminServices.deleteBlacklist(deleteFromBlackListDTO);
+    }
+
+
+    //active deactive catagory
+    @Path("/updateCatagoryStatus")
+    @POST
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public OutUpdateCatagoryStatusDTO updateCatagoryStatus(OutUpdateCatagoryStatusDTO updateCatagoryStatusDTO){
+        return this.updateAdminServices.updateCatagoryStatus(updateCatagoryStatusDTO);
+    }
+
 }

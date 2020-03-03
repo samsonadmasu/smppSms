@@ -130,6 +130,28 @@ public class GetAdminEndPoints {
         }
     }
 
+    @Path("/listBlackList")
+    @GET
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public List<OutBlackListDTO> listBlackLists(){
+        {
+            return this.adminGetServices.listBlackLists();
+        }
+    }
+
+
+    @Path("/searchBlacklist")
+    @GET
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public List<OutBlackListDTO> searchBlacklist(@QueryParam("phoneNumber") String phoneNumber){
+        {
+            return this.adminGetServices.searchBlacklist(phoneNumber);
+        }
+    }
 
 
 }

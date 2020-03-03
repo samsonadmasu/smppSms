@@ -1,11 +1,11 @@
 package et.com.smpp.services.AdminServices;
 
+import et.com.smpp.DeleteDTO.DeleteFromBlacklistDTO;
 import et.com.smpp.InDTOs.*;
+import et.com.smpp.OutDTOs.OutUpdateCatagoryStatusDTO;
+import et.com.smpp.OutDTOs.ResponseMessageDTO;
 import et.com.smpp.dao.*;
-import et.com.smpp.model.CatagoryTable;
-import et.com.smpp.model.InternalBulk;
-import et.com.smpp.model.MessageTable;
-import et.com.smpp.model.Staff;
+import et.com.smpp.model.*;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -37,6 +37,9 @@ public class UpdateAdminServices {
     @EJB
     InternalBulkDao internalBulkDao;
 
+    @EJB
+    BlackListDao blackListDao;
+
     @PersistenceContext(unitName = "smppSms-persistence-unit")
     private EntityManager em;
 
@@ -51,7 +54,7 @@ public class UpdateAdminServices {
     }
 
     public InUpdateMessageDTO updaterMessage(InUpdateMessageDTO inUpdateMessageDto) {
-      //  CatagoryTable CatagoryTable = this.CatagoryTableDao.findById(inUpdateMessageDto.getCatagoryTable());
+
         MessageTable messagetable = this.messagetableDao.findById(inUpdateMessageDto.getId());
 
         messagetable.setMessage(inUpdateMessageDto.getMessage());
@@ -62,7 +65,7 @@ public class UpdateAdminServices {
 
 
     // important
-
+//update if message for this catagory bulk to send
     public UpdateCatagoryStatusDTO updateCatagoryInStatus(UpdateCatagoryStatusDTO updateCatagoryStatusDTO) {
 
         CatagoryTable CatagoryTable = this.CatagoryTableDao.findById(updateCatagoryStatusDTO.getId());
@@ -72,6 +75,7 @@ public class UpdateAdminServices {
     }
 
 
+    //
     public InRegisterInternalBulkDTO updateInternalBulk(InRegisterInternalBulkDTO inRegisterInternalBulkDTO) {
 
         InternalBulk CatagoryTable = this.internalBulkDao.findById(inRegisterInternalBulkDTO.getId());
@@ -96,6 +100,22 @@ public class UpdateAdminServices {
         return inUpdateStaffDto;
     }
 
+    public ResponseMessageDTO deleteBlacklist(DeleteFromBlacklistDTO deleteFromBlackListDTO) {
+        try {
+            BlackList blackList = this.blackListDao.deleteById(deleteFromBlackListDTO.getId());
+            return new ResponseMessageDTO(true, "yes!");
+        } catch (Exception e) {
+            return new ResponseMessageDTO(false, "no!");
+        }
+    }
+
+
+    public OutUpdateCatagoryStatusDTO updateCatagoryStatus(OutUpdateCatagoryStatusDTO updateCatagoryStatusDTO){
+        CatagoryTable catagoryTable = this.CatagoryTableDao.findById(updateCatagoryStatusDTO.getId());
+        catagoryTable.setCatagoryStatus(updateCatagoryStatusDTO.getCatagoryStatus());
+        this.CatagoryTableDao.update(catagoryTable);
+        return updateCatagoryStatusDTO;
+    }
 
 
 }

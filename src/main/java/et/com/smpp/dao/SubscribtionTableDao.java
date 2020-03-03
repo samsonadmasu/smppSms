@@ -42,7 +42,7 @@ public class SubscribtionTableDao {
 	public List<SubscribtionTable> findByCatagoryId(Long id){
 		TypedQuery<SubscribtionTable> findAllQuery = em
 				.createQuery(
-						"SELECT DISTINCT s FROM SubscribtionTable s where s.catagoryTable.id = :id AND s.status = true ",
+						"SELECT DISTINCT s FROM SubscribtionTable s where s.catagoryTable.id = :id AND s.status = true AND s.catagoryTable.catagoryStatus = true",
 						SubscribtionTable.class);
 		findAllQuery.setParameter("id", id);
 		return findAllQuery.getResultList();

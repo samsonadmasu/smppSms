@@ -1,5 +1,5 @@
 package et.com.smpp.model;
-// Generated Feb 28, 2020 3:26:37 PM by Hibernate Tools 5.2.11.Final
+// Generated Mar 3, 2020 10:30:23 AM by Hibernate Tools 5.2.11.Final
 
 
 import javax.persistence.Column;
@@ -24,6 +24,7 @@ public class CatagoryTable  implements java.io.Serializable {
      private String representative;
      private boolean status;
      private Boolean currentActive;
+     private Boolean catagoryStatus;
 
     public CatagoryTable() {
     }
@@ -32,11 +33,12 @@ public class CatagoryTable  implements java.io.Serializable {
     public CatagoryTable(boolean status) {
         this.status = status;
     }
-    public CatagoryTable(String catagoryName, String representative, boolean status, Boolean currentActive) {
+    public CatagoryTable(String catagoryName, String representative, boolean status, Boolean currentActive, Boolean catagoryStatus) {
        this.catagoryName = catagoryName;
        this.representative = representative;
        this.status = status;
        this.currentActive = currentActive;
+       this.catagoryStatus = catagoryStatus;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -89,6 +91,16 @@ public class CatagoryTable  implements java.io.Serializable {
     
     public void setCurrentActive(Boolean currentActive) {
         this.currentActive = currentActive;
+    }
+
+    
+    @Column(name="CatagoryStatus")
+    public Boolean getCatagoryStatus() {
+        return this.catagoryStatus;
+    }
+    
+    public void setCatagoryStatus(Boolean catagoryStatus) {
+        this.catagoryStatus = catagoryStatus;
     }
 
 

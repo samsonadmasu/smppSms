@@ -39,8 +39,11 @@ public class AdminRegisterServices {
     @Inject
     AuthRegisterServices authRegisterServices;
 
-@EJB
-InternalBulkDao internalBulkDao;
+    @EJB
+    BlackListDao blackListDao;
+
+    @EJB
+    InternalBulkDao internalBulkDao;
 
 
 @PersistenceContext(unitName = "smppSms-persistence-unit")
@@ -127,5 +130,15 @@ InternalBulkDao internalBulkDao;
         this.roleDao.create(role);
 
         return inRegisterRoleDto;
+    }
+
+
+    public InBlackListDTO registerBlackList(InBlackListDTO inBlackListDTO){
+
+        BlackList blackList = new BlackList();
+
+        blackList.setPhoneNumber(inBlackListDTO.getPhoneNumber());
+        this.blackListDao.create(blackList);
+        return inBlackListDTO;
     }
 }

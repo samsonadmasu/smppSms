@@ -54,7 +54,6 @@ public class PrepareMessageForSendService {
         try {
 
             List<SubscribtionTable> subscribtiontable = this.subscribtiontableDao.findByCatagoryId(id);
-
             List<BlackList> allBlackLists = this.blackListDao.listAll();
 
               subscribtiontable.forEach(item -> {

@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import et.com.smpp.model.BlackList;
+import et.com.smpp.model.BulkMessage;
 
 /**
  * DAO for BlackList
@@ -20,11 +21,12 @@ public class BlackListDao {
 		em.persist(entity);
 	}
 
-	public void deleteById(Long id) {
+	public BlackList deleteById(Long id) {
 		BlackList entity = em.find(BlackList.class, id);
 		if (entity != null) {
 			em.remove(entity);
 		}
+		return entity;
 	}
 
 	public BlackList findById(Long id) {
@@ -34,6 +36,15 @@ public class BlackListDao {
 	public BlackList update(BlackList entity) {
 		return em.merge(entity);
 	}
+
+
+
+	public List<BlackList> serachBlackList(String phoneNumber){
+		TypedQuery<BlackList> findAllQuery = em.createQuery("SELECT DISTINCT h FROM BlackList h where h.phoneNumber = :phoneNumber", BlackList.class);
+		findAllQuery.setParameter("phoneNumber", phoneNumber);
+		return findAllQuery.getResultList();
+	}
+
 
 
 	public List<BlackList> listAll() {

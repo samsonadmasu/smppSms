@@ -36,6 +36,11 @@ public class AdminGetServices {
 
     @EJB
     InternalBulkDao internalBulkDao;
+
+    @EJB
+    BlackListDao blackListDao;
+
+
     @PersistenceContext(unitName = "smppSms-persistence-unit")
     private EntityManager em;
 
@@ -161,7 +166,24 @@ public class AdminGetServices {
         return subscriber;
     }
 
+    public List<OutBlackListDTO> listBlackLists(){
+        List<OutBlackListDTO> blackList = new ArrayList<OutBlackListDTO>();
+        List<BlackList> list = this.blackListDao.listAll();
+        list.forEach(item->{
+            blackList.add(new OutBlackListDTO(item));
+        });
+     return  blackList;
+    }
 
 
+    public List<OutBlackListDTO> searchBlacklist(String phoneNumber){
+
+        List<OutBlackListDTO> subscriber = new ArrayList<OutBlackListDTO>();
+        List<BlackList> subscriberList = this.blackListDao.serachBlackList(phoneNumber);
+        subscriberList.forEach((item)->{
+            subscriber.add(new OutBlackListDTO(item));
+        });
+        return subscriber;
+    }
 
 }
