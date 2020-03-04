@@ -2,9 +2,11 @@ package et.com.smpp.services.BulkServices;
 
 import et.com.smpp.InDTOs.InFindByIdDTO;
 import et.com.smpp.OutDTOs.ResponseMessageDTO;
+import et.com.smpp.OutDTOs.msgSendResponseDTO;
 import et.com.smpp.dao.*;
 import et.com.smpp.model.*;
 
+import javax.ejb.Asynchronous;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -44,11 +46,21 @@ public class PrepareMessageForSendService {
 
     @EJB
     InternalBulkDao internalBulkDao;
+
+    @EJB
+    ExternalBulkDao externalBulkDao;
+
+    @EJB
+    MessageSendService messageSendService;
+
+    @EJB
+    SmppNumberDao smppNumberDao;
+
     @PersistenceContext(unitName = "smppSms-persistence-unit")
     private EntityManager em;
 
-    String message = "የምን መረጃ ማግኘት ይፈልጋሉ ??" + "\n" +"የሚፈልጉትን መረጃ ለማግኘት" + "\n"+"A - ለአገር ውስጥ የስፖርት መረጃ" + "\n" + "B - ለአገር ውጭ ሀገራት የስፖርት መረጃ" +"\n" +"C - ለጤናዎ የዶክተር ምክር" + "\n" +"D - ለድንቃድንቅ የቴክኖሎጂ መረጃዎች" +"\n"
-            +"E - ለአዳዲስ የቢዝነስ ሀሳቦች" +"\n" +"F - ለአዳዲስ የሙዚቃ እና የ ፊልም መረጃዎች" +"\n"  + "\n" + "የመረጡትን ፊደል መርጠው ወደ 8888 በነጻ ይላኩ" + "\n" + "1 ብር በቀን በሳምንት ለ 6 ቀን";
+//    String message = "የምን መረጃ ማግኘት ይፈልጋሉ ??" + "\n" +"የሚፈልጉትን መረጃ ለማግኘት" + "\n"+"A - ለአገር ውስጥ የስፖርት መረጃ" + "\n" + "B - ለአገር ውጭ ሀገራት የስፖርት መረጃ" +"\n" +"C - ለጤናዎ የዶክተር ምክር" + "\n" +"D - ለድንቃድንቅ የቴክኖሎጂ መረጃዎች" +"\n"
+//            +"E - ለአዳዲስ የቢዝነስ ሀሳቦች" +"\n" +"F - ለአዳዲስ የሙዚቃ እና የ ፊልም መረጃዎች" +"\n"  + "\n" + "የመረጡትን ፊደል መርጠው ወደ 8888 በነጻ ይላኩ" + "\n" + "1 ብር በቀን በሳምንት ለ 6 ቀን";
 
     public ResponseMessageDTO PrepareBulk(long id) {
         try {
@@ -86,9 +98,29 @@ public class PrepareMessageForSendService {
 
 
 
+    public ResponseMessageDTO PrepareExternallBulk(long id) {
+        InternalBulk internalBulk = this.internalBulkDao.findById(id);
+
+        try {
+            List<ExternalBulk> externalBulks = this.externalBulkDao.listAll();
+            externalBulks.forEach(item -> {
+                BulkMessage bulkTwo = new BulkMessage();
+                bulkTwo.setMessageBody(internalBulk.getMessage());
+                bulkTwo.setPhoneNumber(item.getPhoneNumber());
+                bulkTwo.setSentStatus(false);
+                bulkTwo.setSend(false);
+                bulkTwo.setSentTime(new Date());
+                this.BulkMessageDao.create(bulkTwo);
+            });
+            update(internalBulk);
+            return new ResponseMessageDTO(true, "yes!");
+        } catch (Exception e) {
+            return new ResponseMessageDTO(false, "no!");
+        }
+    }
+
 
     public ResponseMessageDTO PrepareInternalBulk(long id) {
-
         InternalBulk internalBulk = this.internalBulkDao.findById(id);
 
         try {
@@ -114,7 +146,9 @@ public class PrepareMessageForSendService {
         this.internalBulkDao.create(internalBulk);
     }
 
-    public ResponseMessageDTO SendInternalBulk() {
+
+
+    public ResponseMessageDTO SendExternalBulkS() {
         try {
             List<BulkMessage> BulkMessage = this.BulkMessageDao.prepareForSend();
             BulkMessage.forEach(item->{
@@ -129,6 +163,43 @@ public class PrepareMessageForSendService {
                 this.internalBulkDao.create(item);
             });
 
+            return new ResponseMessageDTO(true, "yes!");
+        } catch (Exception e) {
+            return new ResponseMessageDTO(false, "no!");
+        }
+    }
+
+
+    public ResponseMessageDTO SendInternalBulkS() {
+        try {
+            List<BulkMessage> BulkMessage = this.BulkMessageDao.prepareForSend();
+            BulkMessage.forEach(item->{
+             item.setSend(true);
+                this.BulkMessageDao.update(item);
+            });
+
+
+            List<InternalBulk> internalBulks = this.internalBulkDao.listAll();
+            internalBulks.forEach(item->{
+                item.setPreparedStatus(false);
+                this.internalBulkDao.create(item);
+            });
+
+              return new ResponseMessageDTO(true, "yes!");
+        } catch (Exception e) {
+            return new ResponseMessageDTO(false, "no!");
+        }
+    }
+
+
+    public ResponseMessageDTO SendExternalBulk() {
+
+        try {
+
+            SendExternalBulkS();
+
+            sendSmsMo();
+
 
             return new ResponseMessageDTO(true, "yes!");
         } catch (Exception e) {
@@ -136,9 +207,46 @@ public class PrepareMessageForSendService {
         }
     }
 
+    public ResponseMessageDTO SendInternalBulk() {
+
+        try {
+
+            SendInternalBulkS();
+
+            sendSmsMo();
+
+
+          return new ResponseMessageDTO(true, "yes!");
+      } catch (Exception e) {
+        return new ResponseMessageDTO(false, "no!");
+     }
+    }
+
+
+
     public ResponseMessageDTO Send() {
+
+        try {
+
+            SendS();
+
+            sendSmsMt();
+
+
+            return new ResponseMessageDTO(true, "yes!");
+        } catch (Exception e) {
+            return new ResponseMessageDTO(false, "no!");
+        }
+    }
+
+
+
+
+
+    public ResponseMessageDTO SendS() {
         try {
             List<BulkMessage> BulkMessage = this.BulkMessageDao.prepareForSend();
+
             BulkMessage.forEach(item->{
                 item.setSend(true);
                 this.BulkMessageDao.update(item);
@@ -148,7 +256,7 @@ public class PrepareMessageForSendService {
                 item.setStatus(false);
                 this.catagoryTableDao.create(item);
             });
-
+      //       sendSms();
             return new ResponseMessageDTO(true, "yes!");
         } catch (Exception e) {
             return new ResponseMessageDTO(false, "no!");
@@ -156,7 +264,61 @@ public class PrepareMessageForSendService {
     }
 
 
+    @Asynchronous
+    public void sendSmsMt() {
 
+        List<BulkMessage> msgSents = this.BulkMessageDao.sendall();
+
+        msgSents.forEach((msg)->{
+
+            System.out.println("----------------------------------------------------------------------------------------------------");
+
+        //    msgSendResponseDTO msgsen = new msgSendResponseDTO();
+            String message = msg.getMessageBody().trim();
+            String phone = msg.getPhoneNumber().trim();
+            //           if(msg.isSentStatus() == false && msg.isSend()==true) {
+            try {
+                SmppNumber smppNumber = this.smppNumberDao.mo();
+
+                messageSendService.sendSMS(message, phone,smppNumber.getMt());
+                System.out.println("------------------------------------------------ sended ----------------------------------------------------");
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            msg.setSentStatus(true);
+            this.BulkMessageDao.update(msg);
+            //          }
+        });
+    }
+
+
+    @Asynchronous
+    public void sendSmsMo() {
+
+        List<BulkMessage> msgSents = this.BulkMessageDao.sendall();
+
+        msgSents.forEach((msg)->{
+
+            System.out.println("----------------------------------------------------------------------------------------------------");
+
+            //    msgSendResponseDTO msgsen = new msgSendResponseDTO();
+            String message = msg.getMessageBody().trim();
+            String phone = msg.getPhoneNumber().trim();
+            //           if(msg.isSentStatus() == false && msg.isSend()==true) {
+            try {
+                SmppNumber smppNumber = this.smppNumberDao.mo();
+                messageSendService.sendSMS(message, phone,smppNumber.getMo());
+                System.out.println("------------------------------------------------ sended ----------------------------------------------------");
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            msg.setSentStatus(true);
+            this.BulkMessageDao.update(msg);
+            //          }
+        });
+    }
 
 
     public ResponseMessageDTO ReChooserSendFornewSubscribures() {
@@ -167,7 +329,7 @@ public class PrepareMessageForSendService {
 
                 String message2 = "";
                 BulkMessage bulkTwo = new BulkMessage();
-                bulkTwo.setMessageBody(message);
+                bulkTwo.setMessageBody("insert rechooser message hir");
                 System.out.println("------------------------------------------ 3");
                 bulkTwo.setPhoneNumber(item.getUserId());
                 bulkTwo.setSentStatus(false);

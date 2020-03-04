@@ -16,6 +16,7 @@ import javax.ws.rs.Produces;
 @Api(value = "SendBulk")
 
 public class SendBulkEndPoint {
+
     @EJB
     PrepareMessageForSendService prepareMessageForSendService;
 
@@ -36,6 +37,19 @@ public class SendBulkEndPoint {
     @PermitAll
     public ResponseMessageDTO mangeSendInternalBulk() {
         return this.prepareMessageForSendService.SendInternalBulk();
+
     }
+
+
+    @Path("/SendExternalBulk")
+    @POST
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public ResponseMessageDTO SendExternalBulk() {
+        return this.prepareMessageForSendService.SendExternalBulk();
+
+    }
+
 
 }

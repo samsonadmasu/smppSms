@@ -39,6 +39,7 @@ com/cassiomolin/security/api/AuthenticatedUserDetails.class
 com/cassiomolin/security/api/model/AuthenticationToken.class
 et/com/smpp/OutDTOs/ResponseMessageDTO.class
 et/com/smpp/model/NamedParameterList.class
+et/com/smpp/dao/SmppNumberDao.class
 et/com/smpp/services/security/PasswordResetService.class
 et/com/smpp/model/Staff.class
 et/com/smpp/dao/BlackListDao.class
@@ -121,6 +122,7 @@ et/com/smpp/services/security/getUserService.class
 et/com/smpp/dao/ExternalBulkDao.class
 et/com/smpp/services/AdminServices/AdminGetServices.class
 et/com/smpp/OutDTOs/OutStaffDTO.class
+et/com/smpp/model/SmppNumber.class
 et/com/smpp/OutDTOs/OutReportSentMessageDTO.class
 et/com/smpp/EndPoints/AdminEndPoints/GetMessageToUpdateEndPoint.class
 et/com/smpp/dao/SyncOrderRelationDumpDao.class

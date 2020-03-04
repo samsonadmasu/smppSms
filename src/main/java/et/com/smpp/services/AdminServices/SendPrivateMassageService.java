@@ -3,6 +3,7 @@ package et.com.smpp.services.AdminServices;
 import et.com.smpp.OutDTOs.SendPrivateMsgOutDTO;
 
 import et.com.smpp.dao.*;
+import et.com.smpp.model.SmppNumber;
 
 
 import javax.ejb.EJB;
@@ -15,7 +16,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
-
+import java.util.List;
 
 
 @Stateless
@@ -38,13 +39,19 @@ public class SendPrivateMassageService {
     @EJB
     StaffDao staffDao;
 
+    @EJB
+    SmppNumberDao smppNumberDao;
+
     @PersistenceContext(unitName = "smppSms-persistence-unit")
     private EntityManager em;
 
 
     public SendPrivateMsgOutDTO sendPrivateMsgOutDTO(SendPrivateMsgOutDTO sendPrivateMsgOutDTO) {
         try {
-            sendSMS(sendPrivateMsgOutDTO.getMessage(), sendPrivateMsgOutDTO.getPhoneNumber());
+         SmppNumber smppNumber = this.smppNumberDao.mo();
+
+
+            sendSMS(sendPrivateMsgOutDTO.getMessage(), sendPrivateMsgOutDTO.getPhoneNumber(),smppNumber.getMo());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -52,10 +59,10 @@ public class SendPrivateMassageService {
     }
 
     @Deprecated
-    private void sendSMS(String message, String phone) throws Exception
+    private void sendSMS(String message, String phone,int mo) throws Exception
     {
         String cleanPhone = cleanPhone(phone);
-        String url = "http://196.189.53.129:12213/cgi-bin/sendsms?username=atlas&password=atlas@1234&from=8748&&to=" + cleanPhone+"&text=" + URLEncoder.encode(message);
+        String url = "http://196.189.53.129:12213/cgi-bin/sendsms?username=atlas&password=atlas@1234&from="+mo+"&&to=" + cleanPhone+"&text=" + URLEncoder.encode(message);
         URL obj = new URL(url);
 
         HttpURLConnection con = (HttpURLConnection)obj.openConnection();

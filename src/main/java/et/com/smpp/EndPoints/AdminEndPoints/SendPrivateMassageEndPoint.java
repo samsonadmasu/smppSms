@@ -6,6 +6,7 @@ import et.com.smpp.services.AdminServices.AdminGetServices;
 import et.com.smpp.services.AdminServices.SendPrivateMassageService;
 import io.swagger.annotations.Api;
 
+import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
@@ -30,7 +31,7 @@ public class SendPrivateMassageEndPoint {
     @POST
     @Produces("application/json")
     @Consumes("application/json")
-    @RolesAllowed("Admin")
+    @PermitAll
     public SendPrivateMsgOutDTO sendPrivateMsgOutDto(SendPrivateMsgOutDTO sendPrivateMsgOutDTO) {
         {
             return this.sendPrivateMassageService.sendPrivateMsgOutDTO(sendPrivateMsgOutDTO);

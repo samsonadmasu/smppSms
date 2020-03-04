@@ -38,7 +38,7 @@ public class BulkMessageDao {
 
 
 	public List<BulkMessage> sendall(){
-		TypedQuery<BulkMessage> findAllQuery = em.createQuery("SELECT DISTINCT h FROM BulkMessage h", BulkMessage.class);
+		TypedQuery<BulkMessage> findAllQuery = em.createQuery("SELECT DISTINCT h FROM BulkMessage h where h.sentStatus = false and h.send = true", BulkMessage.class);
 		return findAllQuery.getResultList();
 	}
 

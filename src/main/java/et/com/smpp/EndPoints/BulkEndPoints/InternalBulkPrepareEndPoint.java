@@ -25,4 +25,15 @@ public class InternalBulkPrepareEndPoint {
     public ResponseMessageDTO PrepareInternalBulk(@QueryParam("id") long id) {
         return this.prepareMessageForSendService.PrepareInternalBulk(id);
     }
+
+
+    @Path("/PrepareExternallBulk")
+    @POST
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public ResponseMessageDTO PrepareExternallBulk(@QueryParam("id") long id) {
+        return this.prepareMessageForSendService.PrepareExternallBulk(id);
+    }
+
 }

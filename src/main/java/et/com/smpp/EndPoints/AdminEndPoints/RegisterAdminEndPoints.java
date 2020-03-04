@@ -73,7 +73,6 @@ public class RegisterAdminEndPoints {
     }
 
 
-
     @Path("/RegisterStaff")
     @POST
     @Produces("application/json")
