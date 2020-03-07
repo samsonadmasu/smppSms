@@ -40,8 +40,4 @@ public class passwordResetEndPoint {
 		return passwordResetService.passwordReset(user,passwordResetRequestDto);
 		
 	}
-	
-
-
-
 }

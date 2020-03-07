@@ -110,9 +110,10 @@ public class PrepareMessageForSendService {
                 bulkTwo.setSentStatus(false);
                 bulkTwo.setSend(false);
                 bulkTwo.setSentTime(new Date());
+                bulkTwo.setCatagory((long) 1000001);
                 this.BulkMessageDao.create(bulkTwo);
             });
-            update(internalBulk);
+            updateExternal(internalBulk);
             return new ResponseMessageDTO(true, "yes!");
         } catch (Exception e) {
             return new ResponseMessageDTO(false, "no!");
@@ -128,38 +129,47 @@ public class PrepareMessageForSendService {
               subscribtiontable.forEach(item -> {
                BulkMessage bulkTwo = new BulkMessage();
                 bulkTwo.setMessageBody(internalBulk.getMessage());
-                 bulkTwo.setPhoneNumber(item.getPhoneNumber());
+                bulkTwo.setPhoneNumber(item.getPhoneNumber());
                 bulkTwo.setSentStatus(false);
                 bulkTwo.setSend(false);
                 bulkTwo.setSentTime(new Date());
+                bulkTwo.setCatagory((long) 1000000);
                 this.BulkMessageDao.create(bulkTwo);
            });
-            update(internalBulk);
+            updateInternal(internalBulk);
             return new ResponseMessageDTO(true, "yes!");
         } catch (Exception e) {
             return new ResponseMessageDTO(false, "no!");
         }
     }
 
-    private void update(InternalBulk internalBulk){
+    private void updateInternal(InternalBulk internalBulk){
         internalBulk.setPreparedStatus(true);
+        internalBulk.setInternal(true);
         this.internalBulkDao.create(internalBulk);
     }
 
 
+    private void updateExternal(InternalBulk internalBulk){
+        internalBulk.setPreparedStatus(true);
+        internalBulk.setExternal(true);
+        this.internalBulkDao.create(internalBulk);
+    }
+
 
     public ResponseMessageDTO SendExternalBulkS() {
         try {
-            List<BulkMessage> BulkMessage = this.BulkMessageDao.prepareForSend();
+            List<BulkMessage> BulkMessage = this.BulkMessageDao.prepareForSendExternalInternal();
             BulkMessage.forEach(item->{
                 item.setSend(true);
-                this.BulkMessageDao.update(item);
+                                this.BulkMessageDao.update(item);
             });
 
 
             List<InternalBulk> internalBulks = this.internalBulkDao.listAll();
             internalBulks.forEach(item->{
                 item.setPreparedStatus(false);
+                item.setExternal(false);
                 this.internalBulkDao.create(item);
             });
 
@@ -172,7 +182,7 @@ public class PrepareMessageForSendService {
 
     public ResponseMessageDTO SendInternalBulkS() {
         try {
-            List<BulkMessage> BulkMessage = this.BulkMessageDao.prepareForSend();
+            List<BulkMessage> BulkMessage = this.BulkMessageDao.prepareForSendExternalInternal();
             BulkMessage.forEach(item->{
              item.setSend(true);
                 this.BulkMessageDao.update(item);
@@ -182,6 +192,7 @@ public class PrepareMessageForSendService {
             List<InternalBulk> internalBulks = this.internalBulkDao.listAll();
             internalBulks.forEach(item->{
                 item.setPreparedStatus(false);
+                item.setInternal(false);
                 this.internalBulkDao.create(item);
             });
 
@@ -224,11 +235,11 @@ public class PrepareMessageForSendService {
 
 
 
-    public ResponseMessageDTO Send() {
+    public ResponseMessageDTO Send(long id) {
 
         try {
 
-            SendS();
+            SendS(id);
 
             sendSmsMt();
 
@@ -243,9 +254,9 @@ public class PrepareMessageForSendService {
 
 
 
-    public ResponseMessageDTO SendS() {
+    public ResponseMessageDTO SendS(long id) {
         try {
-            List<BulkMessage> BulkMessage = this.BulkMessageDao.prepareForSend();
+            List<BulkMessage> BulkMessage = this.BulkMessageDao.prepareForSend(id);
 
             BulkMessage.forEach(item->{
                 item.setSend(true);

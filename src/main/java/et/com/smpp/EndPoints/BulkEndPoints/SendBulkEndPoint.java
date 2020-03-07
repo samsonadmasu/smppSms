@@ -7,10 +7,8 @@ import io.swagger.annotations.Api;
 import javax.annotation.security.PermitAll;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
+
 @RequestScoped
 @Path("/SendBulk")
 @Api(value = "SendBulk")
@@ -25,8 +23,8 @@ public class SendBulkEndPoint {
     @Produces("application/json")
     @Consumes("application/json")
     @PermitAll
-    public ResponseMessageDTO mangeSend() {
-        return this.prepareMessageForSendService.Send();
+    public ResponseMessageDTO mangeSend(@QueryParam("id") Long id) {
+        return this.prepareMessageForSendService.Send(id);
     }
 
 

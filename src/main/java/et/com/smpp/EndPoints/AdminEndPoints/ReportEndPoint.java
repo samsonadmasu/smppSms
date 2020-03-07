@@ -167,14 +167,26 @@ public class ReportEndPoint {
 
 
     //count prepared
-    @Path("/countSubscribersBetweenByCatagory")
+    @Path("/countPreparedByCatagory")
     @POST
     @Produces("application/json")
     @Consumes("application/json")
     @PermitAll
-    public int countSubscribersBetweenByCatagory(@QueryParam("catagory") Long catagory){
+    public int countPreparedByCatagory(@QueryParam("catagory") Long catagory){
         {
             return this.reportService.countPreparedById(catagory);
+        }
+    }
+
+
+    @Path("/countExternalbulk")
+    @POST
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public int countExternalbulk(){
+        {
+            return this.reportService.countExternalbulk();
         }
     }
 

@@ -29,6 +29,9 @@ public class ReportService {
     @EJB
     StaffDao staffDao;
 
+    @EJB
+    ExternalBulkDao externalBulkDao;
+
     @PersistenceContext(unitName = "smppSms-persistence-unit")
     private EntityManager em;
 
@@ -99,6 +102,13 @@ public class ReportService {
 
     public int countPreparedById(long catagory){
         int prepared = this.BulkMessageDao.listCatagoryandCount(catagory);
+        return prepared;
+    }
+
+
+
+    public int countExternalbulk(){
+        int prepared = this.externalBulkDao.countExternalbulk();
         return prepared;
     }
 

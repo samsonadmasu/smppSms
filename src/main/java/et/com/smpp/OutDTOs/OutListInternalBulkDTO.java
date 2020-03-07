@@ -8,12 +8,15 @@ public class OutListInternalBulkDTO {
     private Long id;
     private String message;
     private Boolean preparedStatus;
+    private Boolean internal;
+    private Boolean external;
 
-
-    public OutListInternalBulkDTO(Long id, String message, Boolean preparedStatus) {
+    public OutListInternalBulkDTO(Long id, String message, Boolean preparedStatus, Boolean internal, Boolean external) {
         this.id = id;
         this.message = message;
         this.preparedStatus = preparedStatus;
+        this.internal = internal;
+        this.external = external;
     }
 
     public OutListInternalBulkDTO() {
@@ -23,6 +26,8 @@ public class OutListInternalBulkDTO {
         this.id = entity.getId();
         this.message = entity.getMessage();
         this.preparedStatus = entity.getPreparedStatus();
+        this.internal = entity.getInternal();
+        this.external = entity.getExternal();
     }
 
     public Long getId() {
@@ -47,5 +52,21 @@ public class OutListInternalBulkDTO {
 
     public void setPreparedStatus(Boolean preparedStatus) {
         this.preparedStatus = preparedStatus;
+    }
+
+    public Boolean getInternal() {
+        return internal;
+    }
+
+    public void setInternal(Boolean internal) {
+        this.internal = internal;
+    }
+
+    public Boolean getExternal() {
+        return external;
+    }
+
+    public void setExternal(Boolean external) {
+        this.external = external;
     }
 }

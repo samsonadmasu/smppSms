@@ -28,6 +28,7 @@ public class PasswordResetService {
             boolean resetPasswordStatus = userService.resetPassword(user.getUsername(), newHashedPwd);
 
             passwordResetRequestDTO.setPasswordResetStatus(resetPasswordStatus);
+
             passwordResetRequestDTO.setMessage(" Your password has been reset successfully ");
         } else {
             passwordResetRequestDTO.setMessage(" Your password has not been reset ");

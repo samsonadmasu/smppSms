@@ -43,6 +43,8 @@ public class UpdateAdminEndPoints {
         return this.updateAdminServices.updaterMessage(inUpdateMessageDto);
     }
 
+
+    //sdp in catagory
     @Path("/updateCatagoryIn")
     @POST
     @Produces("application/json")

@@ -976,353 +976,349 @@
       <Collation>utf8_general_ci</Collation>
     </table>
     <table id="250" parent="14" name="externalBulk"/>
-    <table id="251" parent="14" name="messageTable">
+    <table id="251" parent="14" name="messageStatus"/>
+    <table id="252" parent="14" name="messageTable">
       <Collation>utf8_bin</Collation>
     </table>
-    <table id="252" parent="14" name="messageTest">
+    <table id="253" parent="14" name="messageTest">
       <Collation>utf8_bin</Collation>
     </table>
-    <table id="253" parent="14" name="passwordhistory">
+    <table id="254" parent="14" name="passwordhistory">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="254" parent="14" name="role">
+    <table id="255" parent="14" name="role">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="255" parent="14" name="smppNumber"/>
-    <table id="256" parent="14" name="staff">
+    <table id="256" parent="14" name="smppNumber"/>
+    <table id="257" parent="14" name="staff">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="257" parent="14" name="subscribtionTable">
+    <table id="258" parent="14" name="subscribtionTable">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="258" parent="14" name="user">
+    <table id="259" parent="14" name="user">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="259" parent="14" name="user_authorities">
+    <table id="260" parent="14" name="user_authorities">
       <Collation>latin1_swedish_ci</Collation>
     </table>
-    <table id="260" parent="14" name="userauthority">
+    <table id="261" parent="14" name="userauthority">
       <Collation>latin1_swedish_ci</Collation>
     </table>
-    <column id="261" parent="244" name="id">
+    <column id="262" parent="244" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="244" name="message">
+    <column id="263" parent="244" name="message">
       <Position>2</Position>
       <DataType>varchar(254)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="244" name="preparedStatus">
+    <column id="264" parent="244" name="preparedStatus">
       <Position>3</Position>
       <DataType>tinyint(1)|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="264" parent="244" name="PRIMARY">
+    <column id="265" parent="244" name="internal">
+      <Position>4</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="266" parent="244" name="external">
+      <Position>5</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="267" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="265" parent="245" name="id">
+    <column id="268" parent="245" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="245" name="itemkey">
+    <column id="269" parent="245" name="itemkey">
       <Position>2</Position>
       <DataType>varchar(1024)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="245" name="value">
+    <column id="270" parent="245" name="value">
       <Position>3</Position>
       <DataType>varchar(1024)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="245" name="SyncOrderRelationDump_id">
+    <column id="271" parent="245" name="SyncOrderRelationDump_id">
       <Position>4</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="269" parent="245" name="FKnlf65wm5t9jvkde59208wk4i7">
+    <index id="272" parent="245" name="FKnlf65wm5t9jvkde59208wk4i7">
       <ColNames>SyncOrderRelationDump_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="270" parent="245" name="PRIMARY">
+    <key id="273" parent="245" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="271" parent="246" name="id">
+    <column id="274" parent="246" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="246" name="effectiveTime">
+    <column id="275" parent="246" name="effectiveTime">
       <Position>2</Position>
       <DataType>varchar(1024)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="246" name="expiryTime">
+    <column id="276" parent="246" name="expiryTime">
       <Position>3</Position>
       <DataType>varchar(1024)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="246" name="productID">
+    <column id="277" parent="246" name="productID">
       <Position>4</Position>
       <DataType>varchar(1024)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="246" name="serviceID">
+    <column id="278" parent="246" name="serviceID">
       <Position>5</Position>
       <DataType>varchar(1024)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="276" parent="246" name="serviceList">
+    <column id="279" parent="246" name="serviceList">
       <Position>6</Position>
       <DataType>varchar(1024)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="277" parent="246" name="spID">
+    <column id="280" parent="246" name="spID">
       <Position>7</Position>
       <DataType>varchar(1024)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="278" parent="246" name="type">
+    <column id="281" parent="246" name="type">
       <Position>8</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="279" parent="246" name="updateDesc">
+    <column id="282" parent="246" name="updateDesc">
       <Position>9</Position>
       <DataType>varchar(1024)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="280" parent="246" name="updateTime">
+    <column id="283" parent="246" name="updateTime">
       <Position>10</Position>
       <DataType>varchar(1024)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="281" parent="246" name="updateType">
+    <column id="284" parent="246" name="updateType">
       <Position>11</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="246" name="userId">
+    <column id="285" parent="246" name="userId">
       <Position>12</Position>
       <DataType>varchar(1024)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="283" parent="246" name="PRIMARY">
+    <key id="286" parent="246" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="284" parent="247" name="id">
+    <column id="287" parent="247" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="247" name="phoneNumber">
+    <column id="288" parent="247" name="phoneNumber">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="286" parent="247" name="PRIMARY">
+    <key id="289" parent="247" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="287" parent="248" name="id">
+    <column id="290" parent="248" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="248" name="phoneNumber">
+    <column id="291" parent="248" name="phoneNumber">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="248" name="messageBody">
+    <column id="292" parent="248" name="messageBody">
       <Position>3</Position>
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="248" name="sentTime">
+    <column id="293" parent="248" name="sentTime">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="248" name="sentStatus">
+    <column id="294" parent="248" name="sentStatus">
       <Position>5</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="248" name="send">
+    <column id="295" parent="248" name="send">
       <Position>6</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="248" name="catagory">
+    <column id="296" parent="248" name="catagory">
       <Position>7</Position>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="294" parent="248" name="PRIMARY">
+    <key id="297" parent="248" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="295" parent="249" name="id">
+    <column id="298" parent="249" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="249" name="catagoryName">
+    <column id="299" parent="249" name="catagoryName">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="249" name="representative">
+    <column id="300" parent="249" name="representative">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="249" name="Status">
+    <column id="301" parent="249" name="Status">
       <Position>4</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="299" parent="249" name="currentActive">
+    <column id="302" parent="249" name="currentActive">
       <Position>5</Position>
       <DataType>tinyint(1)|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="249" name="CatagoryStatus">
+    <column id="303" parent="249" name="CatagoryStatus">
       <Position>6</Position>
       <DataType>tinyint(1)|0s</DataType>
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="301" parent="249" name="PRIMARY">
+    <key id="304" parent="249" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="302" parent="250" name="id">
+    <column id="305" parent="250" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="250" name="phoneNumber">
+    <column id="306" parent="250" name="phoneNumber">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="304" parent="250" name="PRIMARY">
+    <key id="307" parent="250" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="305" parent="251" name="id">
+    <column id="308" parent="251" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="251" name="catagoryId">
+    <column id="309" parent="251" name="statusName">
       <Position>2</Position>
-      <DataType>bigint(20)|0s</DataType>
+      <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="251" name="message">
-      <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="308" parent="251" name="currDate">
-      <Position>4</Position>
-      <DataType>timestamp|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="309" parent="251" name="catagoryId">
-      <ColNames>catagoryId</ColNames>
-      <Type>btree</Type>
-    </index>
     <key id="310" parent="251" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="311" parent="251" name="messageTable_ibfk_1">
-      <ColNames>catagoryId</ColNames>
-      <RefSchemaName>smppSmsDb</RefSchemaName>
-      <RefTableName>catagoryTable</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="312" parent="252" name="id">
+    <column id="311" parent="252" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="252" name="catagoryId">
+    <column id="312" parent="252" name="catagoryId">
       <Position>2</Position>
       <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="252" name="message">
+    <column id="313" parent="252" name="message">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="315" parent="252" name="currDate">
+    <column id="314" parent="252" name="currDate">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
-      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="316" parent="252" name="catagory">
-      <Position>5</Position>
-      <DataType>bigint(20)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="317" parent="252" name="PRIMARY">
+    <index id="315" parent="252" name="catagoryId">
+      <ColNames>catagoryId</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="316" parent="252" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+    <foreign-key id="317" parent="252" name="messageTable_ibfk_1">
+      <ColNames>catagoryId</ColNames>
+      <RefSchemaName>smppSmsDb</RefSchemaName>
+      <RefTableName>catagoryTable</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
     <column id="318" parent="253" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
@@ -1330,250 +1326,285 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="319" parent="253" name="password">
+    <column id="319" parent="253" name="catagoryId">
+      <Position>2</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="320" parent="253" name="message">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="321" parent="253" name="currDate">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <column id="322" parent="253" name="catagory">
+      <Position>5</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="323" parent="253" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="324" parent="254" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="325" parent="254" name="password">
       <Position>2</Position>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="253" name="staffId">
+    <column id="326" parent="254" name="staffId">
       <Position>3</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="253" name="createdOn">
+    <column id="327" parent="254" name="createdOn">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="322" parent="253" name="PRIMARY">
+    <key id="328" parent="254" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="323" parent="254" name="id">
+    <column id="329" parent="255" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="324" parent="254" name="roleName">
+    <column id="330" parent="255" name="roleName">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="325" parent="254" name="PRIMARY">
+    <key id="331" parent="255" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="326" parent="255" name="id">
+    <column id="332" parent="256" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="327" parent="255" name="mo">
+    <column id="333" parent="256" name="mo">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="328" parent="255" name="mt">
+    <column id="334" parent="256" name="mt">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="329" parent="255" name="PRIMARY">
+    <key id="335" parent="256" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="330" parent="256" name="id">
+    <column id="336" parent="257" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="331" parent="256" name="userName">
+    <column id="337" parent="257" name="userName">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="332" parent="256" name="firstName">
+    <column id="338" parent="257" name="firstName">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="333" parent="256" name="lastName">
+    <column id="339" parent="257" name="lastName">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="334" parent="256" name="password">
+    <column id="340" parent="257" name="password">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="335" parent="256" name="role">
+    <column id="341" parent="257" name="role">
       <Position>6</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="336" parent="256" name="phoneNumber">
+    <column id="342" parent="257" name="phoneNumber">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="337" parent="256" name="email">
+    <column id="343" parent="257" name="email">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="338" parent="256" name="staffStatus">
+    <column id="344" parent="257" name="staffStatus">
       <Position>9</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="339" parent="256" name="role">
+    <index id="345" parent="257" name="role">
       <ColNames>role</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="340" parent="256" name="PRIMARY">
+    <key id="346" parent="257" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="341" parent="256" name="staff_ibfk_1">
+    <foreign-key id="347" parent="257" name="staff_ibfk_1">
       <ColNames>role</ColNames>
       <RefSchemaName>smppSmsDb</RefSchemaName>
       <RefTableName>role</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="342" parent="257" name="id">
+    <column id="348" parent="258" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="343" parent="257" name="phoneNumber">
+    <column id="349" parent="258" name="phoneNumber">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="344" parent="257" name="catagoryId">
+    <column id="350" parent="258" name="catagoryId">
       <Position>3</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="345" parent="257" name="currDate">
+    <column id="351" parent="258" name="currDate">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="346" parent="257" name="status">
+    <column id="352" parent="258" name="status">
       <Position>5</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="347" parent="257" name="reciever">
+    <column id="353" parent="258" name="reciever">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="348" parent="257" name="catagoryId">
+    <index id="354" parent="258" name="catagoryId">
       <ColNames>catagoryId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="349" parent="257" name="PRIMARY">
+    <key id="355" parent="258" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="350" parent="257" name="subscribtionTable_ibfk_1">
+    <foreign-key id="356" parent="258" name="subscribtionTable_ibfk_1">
       <ColNames>catagoryId</ColNames>
       <RefSchemaName>smppSmsDb</RefSchemaName>
       <RefTableName>catagoryTable</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="351" parent="258" name="id">
+    <column id="357" parent="259" name="id">
       <Position>1</Position>
       <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="352" parent="258" name="username">
+    <column id="358" parent="259" name="username">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="353" parent="258" name="password">
+    <column id="359" parent="259" name="password">
       <Position>3</Position>
       <DataType>varchar(64)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="354" parent="258" name="staffId">
+    <column id="360" parent="259" name="staffId">
       <Position>4</Position>
       <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="355" parent="258" name="active">
+    <column id="361" parent="259" name="active">
       <Position>5</Position>
       <DataType>tinyint(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="356" parent="258" name="username">
+    <index id="362" parent="259" name="username">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="357" parent="258" name="userstaffIdfk">
+    <index id="363" parent="259" name="userstaffIdfk">
       <ColNames>staffId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="358" parent="258" name="PRIMARY">
+    <key id="364" parent="259" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="359" parent="258" name="username">
+    <key id="365" parent="259" name="username">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>username</UnderlyingIndexName>
     </key>
-    <column id="360" parent="259" name="user_id">
+    <column id="366" parent="260" name="user_id">
       <Position>1</Position>
       <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="361" parent="259" name="authority">
+    <column id="367" parent="260" name="authority">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="362" parent="260" name="user_id">
+    <column id="368" parent="261" name="user_id">
       <Position>1</Position>
       <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="363" parent="260" name="authority">
+    <column id="369" parent="261" name="authority">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
       <ColumnKind>normal</ColumnKind>

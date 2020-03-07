@@ -69,10 +69,16 @@ public class UpdateAdminServices {
     public UpdateCatagoryStatusDTO updateCatagoryInStatus(UpdateCatagoryStatusDTO updateCatagoryStatusDTO) {
 
         CatagoryTable CatagoryTable = this.CatagoryTableDao.findById(updateCatagoryStatusDTO.getId());
-        CatagoryTable.setCurrentActive(updateCatagoryStatusDTO.getCurrentActive());
-        this.CatagoryTableDao.update(CatagoryTable);
-        return updateCatagoryStatusDTO;
-    }
+
+        if(CatagoryTable.getCatagoryStatus()==true) {
+            CatagoryTable.setCurrentActive(updateCatagoryStatusDTO.getCurrentActive());
+            this.CatagoryTableDao.update(CatagoryTable);
+            return updateCatagoryStatusDTO;
+        }else{
+            updateCatagoryStatusDTO.setCurrentActive(false);
+           return updateCatagoryStatusDTO;
+        }
+     }
 
 
     //

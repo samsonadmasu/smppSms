@@ -76,7 +76,7 @@ public class CatagoryTableDao {
 	public List<CatagoryTable> listAll() {
 		TypedQuery<CatagoryTable> findAllQuery = em
 				.createQuery(
-						"SELECT DISTINCT c FROM CatagoryTable c where c.catagoryStatus = true",
+						"SELECT DISTINCT c FROM CatagoryTable c",
 						CatagoryTable.class);
 		return findAllQuery.getResultList();
 	}

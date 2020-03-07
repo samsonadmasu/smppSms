@@ -113,13 +113,8 @@ public class AdminRegisterServices {
          staff.setPhoneNumber(inRegisterStaffDto.getPhoneNumber());
          staff.setRole(role);
          staff.setStaffStatus(true);
-//        if(inRegisterStaffDto.isRegistrationStatus()){
-//
-//            }
-//
-//         //registerStaffToAuto
-//        this.staffDao.create(staff);
-//
+         this.staffDao.create(staff);
+
         return inRegisterStaffDto;
     }
 

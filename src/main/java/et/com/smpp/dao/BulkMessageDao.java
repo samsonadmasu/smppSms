@@ -65,19 +65,26 @@ public class BulkMessageDao {
 
 
     public int listCatagoryandCount(long catagory){
-	    Date date = new Date();
-	    TypedQuery<BulkMessage> findAllQuery = em.createQuery("SELECT DISTINCT h FROM BulkMessage h where h.catagory =:id AND h.sentStatus = false AND h.sentTime=:date", BulkMessage.class);
+	//    Date date = new Date();
+	    TypedQuery<BulkMessage> findAllQuery = em.createQuery("SELECT DISTINCT h FROM BulkMessage h where h.catagory =:catagory AND h.sentStatus = false", BulkMessage.class);
          findAllQuery.setParameter("catagory", catagory);
-         findAllQuery.setParameter("date", date);
+    //     findAllQuery.setParameter("date", date);
 
 	    return findAllQuery.getResultList().size();
 	}
 
 
-	public List<BulkMessage> prepareForSend(){
-		TypedQuery<BulkMessage> findAllQuery = em.createQuery("SELECT DISTINCT h FROM BulkMessage h where h.send = false ", BulkMessage.class);
+	public List<BulkMessage> prepareForSend(long id){
+		TypedQuery<BulkMessage> findAllQuery = em.createQuery("SELECT DISTINCT h FROM BulkMessage h where h.send = false and h.catagory =:id", BulkMessage.class);
 		return findAllQuery.getResultList();
 	}
+
+	public List<BulkMessage> prepareForSendExternalInternal(){
+		TypedQuery<BulkMessage> findAllQuery = em.createQuery("SELECT DISTINCT h FROM BulkMessage h where h.send = false", BulkMessage.class);
+		return findAllQuery.getResultList();
+	}
+
+
 
 	public List<BulkMessage> listAll(Integer startPosition, Integer maxResult) {
 		TypedQuery<BulkMessage> findAllQuery = em.createQuery(
