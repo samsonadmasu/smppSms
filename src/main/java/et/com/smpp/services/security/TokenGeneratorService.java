@@ -8,7 +8,10 @@ import com.cassiomolin.security.service.UsernamePasswordValidator;
 import com.cassiomolin.user.domain.User;
 import com.google.common.collect.Lists;
 import et.com.smpp.OutDTOs.AllUsersLoginResponseDTO;
+import et.com.smpp.dao.StaffDao;
+import et.com.smpp.model.Staff;
 
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.util.ArrayList;
@@ -24,9 +27,14 @@ public class TokenGeneratorService {
     @Inject
     private UsernamePasswordValidator usernamePasswordValidator;
 
+    @EJB
+    StaffDao staffDao;
+
     public AllUsersLoginResponseDTO authenticateUser(User user) {
         Iterator<Authority> authorityIterator = user.getAuthorities().iterator();
         ArrayList<Authority> authorities = Lists.newArrayList(authorityIterator);
+        Staff staff = this.staffDao.findById(user.getStaffId());
+
 
         if (authorities.isEmpty()) {
             throw new AuthenticationException("The user is not authorized");

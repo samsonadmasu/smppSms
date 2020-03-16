@@ -10,18 +10,21 @@ public class OutCatagoryStatusDetail {
     private boolean status;
     private boolean currentActive;
     private Boolean catagoryStatus;
+    private Boolean resendSms;
+
 
 
     public OutCatagoryStatusDetail() {
     }
 
-    public OutCatagoryStatusDetail(Long id, String catagoryName, String representative, boolean status, boolean currentActive, Boolean catagoryStatus) {
+    public OutCatagoryStatusDetail(Long id, String catagoryName, String representative, boolean status, boolean currentActive, Boolean catagoryStatus, Boolean resendSms) {
         this.id = id;
         this.catagoryName = catagoryName;
         this.representative = representative;
         this.status = status;
         this.currentActive = currentActive;
         this.catagoryStatus = catagoryStatus;
+        this.resendSms = resendSms;
     }
 
     public OutCatagoryStatusDetail(final CatagoryTable entity) {
@@ -31,6 +34,7 @@ public class OutCatagoryStatusDetail {
         this.status = entity.isStatus();
         this.currentActive = entity.getCurrentActive();
         this.catagoryStatus = entity.getCatagoryStatus();
+        this.resendSms = entity.getResendSms();
 
 
     }
@@ -82,5 +86,13 @@ public class OutCatagoryStatusDetail {
 
     public void setCatagoryStatus(Boolean catagoryStatus) {
         this.catagoryStatus = catagoryStatus;
+    }
+
+    public Boolean getResendSms() {
+        return resendSms;
+    }
+
+    public void setResendSms(Boolean resendSms) {
+        this.resendSms = resendSms;
     }
 }

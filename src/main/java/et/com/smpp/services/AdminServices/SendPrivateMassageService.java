@@ -47,22 +47,23 @@ public class SendPrivateMassageService {
 
 
     public SendPrivateMsgOutDTO sendPrivateMsgOutDTO(SendPrivateMsgOutDTO sendPrivateMsgOutDTO) {
-        try {
-         SmppNumber smppNumber = this.smppNumberDao.mo();
+        try { SmppNumber smppNumber = this.smppNumberDao.mo();
 
 
-            sendSMS(sendPrivateMsgOutDTO.getMessage(), sendPrivateMsgOutDTO.getPhoneNumber(),smppNumber.getMo());
-        } catch (Exception e) {
+            sendSMS(sendPrivateMsgOutDTO.getMessage(), sendPrivateMsgOutDTO.getPhoneNumber(),smppNumber.getMo(),smppNumber.getIpAdress(),smppNumber.getUsername(),smppNumber.getPassword());
+       } catch (Exception e) {
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        return sendPrivateMsgOutDTO;
+return sendPrivateMsgOutDTO;
     }
 
     @Deprecated
-    private void sendSMS(String message, String phone,int mo) throws Exception
+    private void sendSMS(String message, String phone, int mo, String ipAdress, String username, String password) throws Exception
     {
+        //http://196.189.53.129:12213
         String cleanPhone = cleanPhone(phone);
-        String url = "http://196.189.53.129:12213/cgi-bin/sendsms?username=atlas&password=atlas@1234&from="+mo+"&&to=" + cleanPhone+"&text=" + URLEncoder.encode(message);
+        String url = ipAdress+"/cgi-bin/sendsms?username="+username+"&password="+password+"&from="+mo+"&&to=" + cleanPhone+"&text=" + URLEncoder.encode(message);
         URL obj = new URL(url);
 
         HttpURLConnection con = (HttpURLConnection)obj.openConnection();

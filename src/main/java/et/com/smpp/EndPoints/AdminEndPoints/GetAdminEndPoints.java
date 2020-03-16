@@ -153,5 +153,14 @@ public class GetAdminEndPoints {
         }
     }
 
+    @Path("/listCompany")
+    @GET
+    @Produces("application/json")
+    @Consumes("application/json")
+      public OutCompanyProfileDTO listCompany()
+        {
+            return this.adminGetServices.listCompany();
+        }
+
 
 }

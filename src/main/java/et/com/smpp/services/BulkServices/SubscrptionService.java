@@ -1,12 +1,11 @@
 package et.com.smpp.services.BulkServices;
 
+import et.com.smpp.InDTOs.InDeliveryReportDTO;
 import et.com.smpp.InDTOs.InSubscriptioDTO;
-import et.com.smpp.dao.BulkMessageDao;
-import et.com.smpp.dao.CatagoryTableDao;
-import et.com.smpp.dao.MessageTableDao;
-import et.com.smpp.dao.SubscribtionTableDao;
+import et.com.smpp.dao.*;
 import et.com.smpp.model.BulkMessage;
 import et.com.smpp.model.CatagoryTable;
+import et.com.smpp.model.MessageStatus;
 import et.com.smpp.model.SubscribtionTable;
 
 
@@ -31,6 +30,9 @@ public class SubscrptionService {
 
     @EJB
     SubscribtionTableDao subscribtiontableDao;
+
+    @EJB
+    MessageStatusDao messageStatusDao;
 
     @PersistenceContext(unitName = "smppSms-persistence-unit")
     private EntityManager em;
@@ -72,7 +74,14 @@ public class SubscrptionService {
         return subscriptionSMSRequestDto;
     }
 
-    public void Setting(InSubscriptioDTO subscriptionSMSRequestDto){
+
+    public InDeliveryReportDTO getDelivery(InDeliveryReportDTO inDeliveryReportDTO) {
+        MessageStatus messageStatus = new MessageStatus();
+        messageStatus.setStatusName(inDeliveryReportDTO.getSender());
+        return inDeliveryReportDTO;
+    }
+
+        public void Setting(InSubscriptioDTO subscriptionSMSRequestDto){
         CatagoryTable CatagoryTable = this.CatagoryTableDao.findByMessage(subscriptionSMSRequestDto.getMessage());
         SubscribtionTable subscribtiontable = new SubscribtionTable();
         subscribtiontable.setCatagoryTable(CatagoryTable);

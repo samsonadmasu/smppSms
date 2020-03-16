@@ -39,6 +39,7 @@ com/cassiomolin/security/api/AuthenticatedUserDetails.class
 com/cassiomolin/security/api/model/AuthenticationToken.class
 et/com/smpp/OutDTOs/ResponseMessageDTO.class
 et/com/smpp/model/NamedParameterList.class
+et/com/smpp/dao/MessageStatusDao.class
 et/com/smpp/dao/SmppNumberDao.class
 et/com/smpp/services/security/PasswordResetService.class
 et/com/smpp/model/Staff.class
@@ -120,6 +121,7 @@ et/com/smpp/InDTOs/InFindByIdDTO.class
 et/com/smpp/InDTOs/InUpdateStaffDTO.class
 et/com/smpp/services/security/getUserService.class
 et/com/smpp/dao/ExternalBulkDao.class
+et/com/smpp/model/MessageStatus.class
 et/com/smpp/services/AdminServices/AdminGetServices.class
 et/com/smpp/OutDTOs/OutStaffDTO.class
 et/com/smpp/model/SmppNumber.class
@@ -129,6 +131,7 @@ et/com/smpp/dao/SyncOrderRelationDumpDao.class
 et/com/smpp/EndPoints/AdminEndPoints/GetAdminEndPoints.class
 et/com/smpp/InDTOs/InUpdateMessageDTO.class
 com/cassiomolin/security/api/filter/AuthorizationFilter.class
+et/com/smpp/InDTOs/InDeliveryReportDTO.class
 com/cassiomolin/security/api/exeptionmapper/AccessDeniedExceptionMapper.class
 et/com/smpp/services/security/AuthRegisterServices.class
 et/com/smpp/EndPoints/GeneralEndPoints/UpdateGeneralEndPoints.class

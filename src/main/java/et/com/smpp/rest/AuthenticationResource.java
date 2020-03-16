@@ -9,10 +9,13 @@ import com.cassiomolin.security.service.UsernamePasswordValidator;
 import com.cassiomolin.user.domain.User;
 
 import et.com.smpp.OutDTOs.AllUsersLoginResponseDTO;
+import et.com.smpp.dao.StaffDao;
+import et.com.smpp.model.Staff;
 import et.com.smpp.services.security.TokenGeneratorService;
 import io.swagger.annotations.Api;
 
 import javax.annotation.security.PermitAll;
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
@@ -46,6 +49,9 @@ public class AuthenticationResource {
     @Inject
     private TokenGeneratorService tokenGeneratorService;
 
+    @EJB
+    StaffDao staffDao;
+
     @Path("/Admin")
     @POST
     @Consumes("application/json")
@@ -55,7 +61,12 @@ public class AuthenticationResource {
 
         System.out.println("Got================== " + credentials.getUsername());
 
-        User user = usernamePasswordValidator.validateCredentials(credentials.getUsername(), credentials.getPassword());
+        Staff staff = this.staffDao.findbyUserName(credentials.getUsername());
+        if(staff.isStaffStatus()) {
+            User user = usernamePasswordValidator.validateCredentials(credentials.getUsername(), credentials.getPassword());
+            return tokenGeneratorService.authenticateUser(user);
+        }
+        User user = new User();
         return tokenGeneratorService.authenticateUser(user);
     }
 

@@ -70,6 +70,7 @@ public class UpdateAdminEndPoints {
     @Consumes("application/json")
     @PermitAll
     public InUpdateStaffDTO updaterStaff(InUpdateStaffDTO inUpdateStaffDto) {
+
         return this.updateAdminServices.updaterStaff(inUpdateStaffDto);
     }
 

@@ -56,6 +56,7 @@ public class AuthRegisterServices {
     }
 
 
+
     private void registerStaffToAuto(InRegisterStaffDTO staffRegisterDTO) {
         Long roleId = staffRegisterDTO.getRole();
         Role role = this.roleDao.findById(roleId);
@@ -64,6 +65,8 @@ public class AuthRegisterServices {
             case "User":
                 authorities = EnumSet.of(Authority.User);
                 break;
+            case "superAdmin":
+                authorities = EnumSet.of(Authority.superAdmin);
         }
         if (authorities != null) {
             User user = registerUser(staffRegisterDTO, authorities);

@@ -1,5 +1,6 @@
 package et.com.smpp.dao;
 
+import et.com.smpp.model.CatagoryTable;
 import et.com.smpp.model.Staff;
 
 import java.util.List;
@@ -36,7 +37,16 @@ public class StaffDao {
 		return em.merge(entity);
 	}
 
+	public Staff findbyUserName(String userName){
+		List<Staff> staff =  em.createQuery("SELECT DISTINCT c FROM Staff c WHERE c.userName = :userName", Staff.class)
+				.setParameter("userName", userName)
+				.getResultList();
 
+		if(!staff.isEmpty()){
+			return staff.get(0);
+		}
+		return null;
+	}
 
 	public List<Staff> listAll() {
 		TypedQuery<Staff> findAllQuery = em

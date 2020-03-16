@@ -28,6 +28,18 @@ public class SendBulkEndPoint {
     }
 
 
+
+    @Path("/resendSend")
+    @POST
+    @Produces("application/json")
+    @Consumes("application/json")
+    @PermitAll
+    public ResponseMessageDTO mangeReSend(@QueryParam("id") Long id) {
+        return this.prepareMessageForSendService.ReSend(id);
+    }
+
+
+
     @Path("/SendInternalBulk")
     @POST
     @Produces("application/json")

@@ -80,9 +80,9 @@ public class RegisterAdminEndPoints {
     @PermitAll
     public InRegisterStaffDTO RegisterStaff(InRegisterStaffDTO inRegisterStaffDto) {
      InRegisterStaffDTO inRegisterStaffDTOA = this.adminRegisterServices.RegisterStaff(inRegisterStaffDto);
-     if(inRegisterStaffDTOA.isRegistrationStatus()==true){
+   //  if(inRegisterStaffDTOA.isRegistrationStatus()){
          return this.authRegisterServices.registeStaffToAuth(inRegisterStaffDTOA);
-     }else return inRegisterStaffDTOA;
+    // }else return inRegisterStaffDTOA;
     }
 
     @Path("/RegisterRole")

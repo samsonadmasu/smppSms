@@ -5,6 +5,8 @@ import et.com.smpp.model.CatagoryTable;
 import java.util.List;
 
 import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -19,7 +21,12 @@ public class CatagoryTableDao {
 	@PersistenceContext(unitName = "smppSms-persistence-unit")
 	private EntityManager em;
 
+	@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
 	public void create(CatagoryTable entity) {
+		em.persist(entity);
+	}
+
+	public void createResent(CatagoryTable entity) {
 		em.persist(entity);
 	}
 
@@ -37,6 +44,14 @@ public class CatagoryTableDao {
 	public CatagoryTable update(CatagoryTable entity) {
 		return em.merge(entity);
 	}
+
+	@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+	public CatagoryTable updateResend(CatagoryTable entity) {
+		return em.merge(entity);
+	}
+
+
+
 
 	public CatagoryTable findByMessage(String representative){
 		List<CatagoryTable> CatagoryTable =  em.createQuery("SELECT DISTINCT c FROM CatagoryTable c WHERE c.representative  = :representative", CatagoryTable.class)

@@ -1,5 +1,6 @@
 package et.com.smpp.services.AdminServices;
 
+import com.cassiomolin.user.domain.User;
 import et.com.smpp.DeleteDTO.DeleteFromBlacklistDTO;
 import et.com.smpp.InDTOs.*;
 import et.com.smpp.OutDTOs.OutUpdateCatagoryStatusDTO;
@@ -39,6 +40,9 @@ public class UpdateAdminServices {
 
     @EJB
     BlackListDao blackListDao;
+
+
+
 
     @PersistenceContext(unitName = "smppSms-persistence-unit")
     private EntityManager em;

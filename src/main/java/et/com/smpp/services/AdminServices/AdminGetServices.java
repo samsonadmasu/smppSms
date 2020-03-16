@@ -40,6 +40,9 @@ public class AdminGetServices {
     @EJB
     BlackListDao blackListDao;
 
+    @EJB
+    CompanyProfileDao companyProfileDao;
+
 
     @PersistenceContext(unitName = "smppSms-persistence-unit")
     private EntityManager em;
@@ -184,6 +187,16 @@ public class AdminGetServices {
             subscriber.add(new OutBlackListDTO(item));
         });
         return subscriber;
+    }
+
+
+    public OutCompanyProfileDTO listCompany(){
+        OutCompanyProfileDTO message = new OutCompanyProfileDTO();
+        CompanyProfile companyProfiles = this.companyProfileDao.company();
+
+        message.setId(companyProfiles.getId());
+        message.setCompanyName(companyProfiles.getCompanyName());
+       return message;
     }
 
 }
